@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Дмитрий Мартынов](https://up.htmlacademy.ru/htmlcss/36/user/2249401).
-* Наставник: [Александр Ламков](https://htmlacademy.ru/profile/aleksanderlamkov)
+* Наставник: [Александр Ламков](https://htmlacademy.ru/profile/aleksanderlamkov).
 
 ---
 
