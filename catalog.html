@@ -70,7 +70,13 @@
         </ul>
       </header>
         <section class="catalog-products">
-          <h2 class="visually-hidden">Список фильтров</h2>
+          <h2 class="catalog-products-title">Фильтр</h2>
+
+          <form class="catalog-price-filter">
+            <label for="range-input">Стоимость</label><br>
+            От 0<input class="range-input" type="range" id="range-input" min="0" max="8000" value="5000">До 5000
+          </form>
+
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
             <fieldset class="catalog-filter-group">
