@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
-      <title>HTML Academy: Девайс</title>
+    <title>HTML Academy: Девайс</title>
   </head>
+
   <body>
     <header class="page-header">
 
+      <a class="navigation-logo" href="index.html">
+        <h1 class="visually-hidden">Device</h1>
+        <img class="logo" src="images/header-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36" loading="lazy">
+      </a>
+      <form class="page-search-form" action="#" method="post">
+        <label>
+          <input class="field" type="search" name="field" placeholder="Поиск по сайту">
+          <button type="submit" class="search-button">Найти</button>
+        </label>
+      </form>
       <nav class="navigation">
-
-        <a class="navigation-logo" href="index.html">
-          <h1 class="visually-hidden">Device</h1>
-          <img class="logo" src="#" alt="Логотип интернет-магазина «Девайс»" width="" height="" loading="lazy">
-        </a>
-        <form class="page-search-form" action="#" method="post">
-          <label>
-            <img class="search-logo" src="#"  alt="Кнопка поиска" width="" height="" loading="lazy">
-            <input class="field" type="search" name="field" placeholder="Поиск по сайту">
-            <button type="submit" class="search-button">Найти</button>
-          </label>
-        </form>
         <ul class="navigation-list login">
           </li>
           <li class="navigation-item">
@@ -32,11 +32,11 @@
             <a class="navigation-link" href="#">Корзина</a>
           </li>
         </ul><br>
-        <div class="navigation-catalogue-button">
+        <div class="--navigation-link-wrapper--"> <!--navigation-link-wrapper-->
           <a class="navigation-link navigation-link-current" href="catalog.html">Каталог товаров</a>
-              <button class="catalogue-field" type="button" >
-                <span class="visually-hidden">Вывод каталога</span>
-              <button>
+          <button class="catalogue-field" type="button"> <!-- атрибут aria-label-->
+            <span class="visually-hidden">Вывод каталога</span>
+          </button>
         </div>
         <ul class="navigation-list catalogue">
           <li class="navigation-item">
@@ -54,13 +54,16 @@
 
     <main class="main-page">
       <section class="slider">
-          <h2 class="visually-hidden">Примеры товаров</h2>
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </button>
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Следующее фото</span>
-          </button>
+        <h2 class="visually-hidden">Примеры товаров</h2>
+        <button class="slider-button slider-prev" type="button">
+          <span class="visually-hidden">Предыдущее фото</span>
+        </button>
+        <img class="slider-image" src="images/slider-1.png" width="560" height="560" loading="lazy">
+        <img class="slider-image visually-hidden" src="images/slider-2.png" width="560" height="560" loading="lazy">
+        <img class="slider-image visually-hidden" src="images/slider-3.png" width="560" height="560" loading="lazy">
+        <button class="slider-button slider-next" type="button">
+          <span class="visually-hidden">Следующее фото</span>
+        </button>
 
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
@@ -68,9 +71,9 @@
               <span class="visually-hidden">1 фото</span>
               <article class="copter">
                 <p class="article-text big"><b>Порхает как бабочка,<br>
-                жалит как пчела!</b></p>
+                    жалит как пчела!</b></p>
                 <p class="article-text small">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
-                 мощным лазером, замаскированным под стандартную камеру.
+                  мощным лазером, замаскированным под стандартную камеру.
                 </p>
 
                 <a class="button-link" href="#">Подробнее</a>
@@ -78,7 +81,8 @@
                 <dl class="slider-info">
                   <dt>800 м</dt>
                   <dd>Дальность полета</dd>
-                  <dt>50 м<dt>
+                  <dt>50 м
+                  <dt>
                   <dd>Дальноcть поражения</dd>
                 </dl>
               </article>
@@ -89,7 +93,8 @@
               <span class="visually-hidden">2 фото</span>
               <article class="fitness-watch visually-hidden">
                 <p class="article-text big"><b>Худеем<br> правильно!</b></p>
-                <p class="article-text small">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+                <p class="article-text small">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать
+                  занятия и соблюдать диету.</p>
 
                 <a class="button-link" href="#">Подробнее</a>
 
@@ -105,8 +110,9 @@
               <span class="visually-hidden">3 фото</span>
               <article class="selfie-stick visually-hidden">
                 <p class="article-text big"><b>Делай селфи,<br>
-                  как Бен Стиллер!</b></p>
-                <p class="article-text small">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+                    как Бен Стиллер!</b></p>
+                <p class="article-text small">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь
+                  (Восемь, Карл!) метров длиной и весом всего 5 кг.
                 </p>
 
                 <a class="button-link" href="#">Подробнее</a>
@@ -114,13 +120,14 @@
                 <dl class="slider-info">
                   <dt>8,5 м</dt>
                   <dd>Длина палки</dd>
-                  <dt>5 кг<dt>
+                  <dt>5 кг
+                  <dt>
                   <dd>Вес палки</dd>
                   <dt>Карбон</dt>
                   <dd>Материал</dd>
                 </dl>
               </article>
-             </button>
+            </button>
           </li>
 
       </section>
@@ -130,37 +137,37 @@
         <ul class="mini-catalogue-list">
           <li class="mini-catalogue-section">
             <a class="mini-catalogue-link">
-              <img class="mini-catalogue-image" src="#"  alt="VR-очки" width="" height="" loading="lazy">
+              <img class="mini-catalogue-image" src="images/catalog-images-1.svg" alt="VR-очки" width="160" height="160" loading="lazy">
               <h3 class="mini-catalogue-title">Виртуальная<br> реальность</h3>
             </a>
           </li>
           <li class="mini-catalogue-section">
             <a class="mini-catalogue-link">
-              <img class="mini-catalogue-image" src="#"  alt="Селфи-палка" width="" height="" loading="lazy">
+              <img class="mini-catalogue-image" src="images/catalog-images-2.svg" alt="Селфи-палка" width="160" height="160" loading="lazy">
               <h3 class="mini-catalogue-title">Моноподы<br> для селфи</h3>
             </a>
           </li>
           <li class="mini-catalogue-section">
             <a class="mini-catalogue-link">
-              <img class="mini-catalogue-image" src="#"  alt="Экшн-камера" width="" height="" loading="lazy">
+              <img class="mini-catalogue-image" src="images/catalog-images-3.svg" alt="Экшн-камера" width="160" height="160" loading="lazy">
               <h3 class="mini-catalogue-title">Экшн-камеры</h3>
             </a>
           </li>
           <li class="mini-catalogue-section">
             <a class="mini-catalogue-link">
-              <img class="mini-catalogue-image" src="#"  alt="Фитнес-браслет" width="" height="" loading="lazy">
+              <img class="mini-catalogue-image" src="images/catalog-images-4.svg" alt="Фитнес-браслет" width="160" height="160" loading="lazy">
               <h3 class="mini-catalogue-title">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="mini-catalogue-section">
             <a class="mini-catalogue-link">
-              <img class="mini-catalogue-image" src="#"  alt="Умные часы" width="" height="" loading="lazy">
+              <img class="mini-catalogue-image" src="images/catalog-images-5.svg" alt="Умные часы" width="160" height="160" loading="lazy">
               <h3 class="mini-catalogue-title">Умные часы</h3>
             </a>
           </li>
           <li class="mini-catalogue-section">
             <a class="mini-catalogue-link">
-              <img class="mini-catalogue-image" src="#"  alt="Квадрокоптер" width="" height="" loading="lazy">
+              <img class="mini-catalogue-image" src="images/catalog-images-6.svg" alt="Квадрокоптер" width="160" height="160" loading="lazy">
               <h3 class="mini-catalogue-title">Квадрокоптеры</h3>
             </a>
           </li>
@@ -186,18 +193,18 @@
 
       <div class="delivery">
         <a class="delivery-link">
-        Доставим редкий товар под заказ
-        <img class="info-icon" src="#" width="" height="" loading="lazy">
+          Доставим редкий товар под заказ
+          <img class="info-icon" src="#" width="" height="" loading="lazy">
         </a>
       </div>
 
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
         <p class="about-us-text">Огромный выбор гаджетов не оставит равнодушным<br>
-         гика, который есть в каждом из нас.
+          гика, который есть в каждом из нас.
         </p>
         <p class="about-us-text">Мы можем доставить ваш товар в самые отдалённые<br>
-         уголки России транспортными компаниями:
+          уголки России транспортными компаниями:
         </p>
         <ul class="about-us-delivery-list">
           <li class="about-us-deliveries">
@@ -237,12 +244,13 @@
       <section class="subscription">
         <h2 class="visually-hidden">Рассылка</h2>
         <p class="subscription-text big"><b>Подпишитесь<br>
-          на рассылку</b></p>
+            на рассылку</b></p>
         <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>
           длительными тест-драйвами, распаковками, а также акции,<br>
-         спецпредложения и вот это вот всё.</p>
+          спецпредложения и вот это вот всё.</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscription-field" type="email" name="subscription-email" id="email"  id="subscription-field" placeholder="Ваш e-mail">
+          <input class="subscription-field" type="email" name="subscription-email" id="subscription-field"
+            placeholder="Ваш e-mail">
           <button class="button subscription-button" type="submit">
             Подписаться
           </button>
@@ -254,10 +262,10 @@
     <footer class="page-footer">
       <section class="footer-address">
         <h2 class="visually-hidden">Device</h2>
-        <img class="footer-logo" alt="Логотип интернет-магазина «Девайс»" width="" height="" loading="lazy">
+        <img class="footer-logo" src="images/footer-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36" loading="lazy">
         <address class="footer-address-text">
           Санкт-Петербург, набережная<br>
-        реки Карповки, 5, литера П.
+          реки Карповки, 5, литера П.
         </address>
       </section>
 
@@ -296,10 +304,11 @@
       <section class="footer-contacts">
         <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         <a class="footer-conatcts-link" href="https://echo.htmlacademy.ru/.">
-          <img class="htmlacademy-logo" alt="html академия" width="" height="" loading="lazy">
+          <img class="htmlacademy-logo" src="images/academy-logo.svg" alt="html академия" width="115" height="33" loading="lazy">
         </a>
       </section>
 
     </footer>
   </body>
+
 </html>
