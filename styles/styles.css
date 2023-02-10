@@ -140,7 +140,8 @@ body {
 }
 
 .slider-pagination-item {
-  background-color: #ffe17f;
+  display: flex;
+  width: 1160px;
 }
 
 .article-text-big {
