@@ -15,21 +15,20 @@
           <img class="logo" src="images/header-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145"
             height="36" loading="lazy">
         </a>
-        <form class="page-search-form" action="#" method="post">
-          <label>
-            <input class="field" type="search" name="field" placeholder="Поиск по сайту">
-            <button type="submit" class="search-button">Найти</button>
-          </label>
-        </form>
-        <nav class="navigation">
+        <div class="menu-container">
+          <form class="page-search-form" action="#" method="post">
+            <label>
+              <input class="field" type="search" name="field" placeholder="Поиск по сайту">
+              <button type="submit" class="search-button">Найти</button>
+            </label>
+          </form>
+          <div class="navigation-login-wrapper">
+            <a class="navigation-menu-link navigation-login" href="#">
+              <span class="visually-hidden">Войти в личный кабинет</span>
+              Войти
+            </a>
+          </div>
           <ul class="navigation-menu-list">
-            </li>
-            <li class="navigation-menu-item">
-              <a class="navigation-menu-link navigation-login" href="#">
-                <span class="visually-hidden">Войти в личный кабинет</span>
-                Войти
-              </a>
-            </li>
             <li class="navigation-menu-item">
               <a class="navigation-menu-link navigation-compare" href="#">
                 <span class="visually-hidden">Добавить в сравнение</span>
@@ -43,7 +42,9 @@
                 Корзина
               </a>
             </li>
-          </ul><br>
+          </ul>
+        </div>
+        <div class="catalog-container">
           <div class="navigation-link-wrapper">
             <a class="navigation-catalog-link navigation-link-current" href="catalog.html">Каталог товаров</a>
             <button class="catalog-field" type="button">
@@ -61,7 +62,7 @@
               <a class="navigation-catalog-link" href="#">Контакты</a>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
 

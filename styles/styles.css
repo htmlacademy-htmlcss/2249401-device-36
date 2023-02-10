@@ -64,13 +64,39 @@ body {
 }
 
 .header-container {
+  display: flex;
+  flex-direction: column;
   width: 1160px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   background-color: #ffe17f;
 }
 
+.navigation-logo {
+  display: block;
+  margin: -20px auto 30px 60px;
+}
+
+.menu-container {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
+  justify-content:  space-between;
+  align-items: center;
+}
+
+.page-search-form {
+  width: 517px;
+}
+
 .navigation-menu-list {
+  display: flex;
+  margin-left: auto;
+  gap: 36px;
   list-style: none;
+}
+
+.navigation-login-wrapper {
+  margin: 0 26px;
 }
 
 .navigation-menu-link {
@@ -83,7 +109,18 @@ body {
   text-decoration: none;
 }
 
+.catalog-container {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items:  center;
+}
+
 .navigation-catalog-list {
+  display: flex;
+  margin-left: auto;
+  gap: 45px;
   list-style: none;
 }
 
