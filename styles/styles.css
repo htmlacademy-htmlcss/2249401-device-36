@@ -43,7 +43,7 @@ body {
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.17;
   text-align: center;
   color: #000000;
   letter-spacing: 0.2em;
@@ -200,17 +200,18 @@ body {
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  line-height: 1.67;
 }
 
 .slider-info-term {
   margin: 0;
   font-size: 36px;
+  line-height: 0.83;
 }
 
 .slider-info-description {
   margin: 0;
   font-size: 18px;
+  line-height: 1.88;
   color: #444444;
 }
 
