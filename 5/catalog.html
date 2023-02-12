@@ -11,65 +11,67 @@
   <body>
     <header class="page-header">
       <div class="header-container">
-        <a class="navigation-logo" href="index.html">
-          <h1 class="visually-hidden">Device</h1>
-          <img class="logo" src="images/header-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145"
-            height="36" loading="lazy">
-        </a>
-        <div class="menu-container">
-          <form class="page-search-form" action="#" method="post">
-            <label>
-              <input class="field" type="search" name="field" placeholder="Поиск по сайту">
-              <button type="submit" class="search-button">Найти</button>
-            </label>
-          </form>
-          <div class="navigation-login-wrapper">
-            <a class="navigation-menu-link navigation-login" href="#">
-              <span class="visually-hidden">Войти в личный кабинет</span>
-              Войти
-            </a>
-          </div>
-          <ul class="navigation-menu-list">
-            <li class="navigation-menu-item">
-              <a class="navigation-menu-link navigation-compare" href="#">
-                <span class="visually-hidden">Добавить в сравнение</span>
-                Сравнить
+        <div class="header-inner">
+          <a class="navigation-logo" href="index.html">
+            <h1 class="visually-hidden">Device</h1>
+            <img class="logo" src="images/header-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145"
+              height="36" loading="lazy">
+          </a>
+          <div class="menu-container">
+            <form class="page-search-form" action="#" method="post">
+              <label>
+                <input class="field" type="search" name="field" placeholder="Поиск по сайту">
+                <button type="submit" class="search-button">Найти</button>
+              </label>
+            </form>
+            <div class="navigation-login-wrapper">
+              <a class="navigation-menu-link navigation-login" href="#">
+                <span class="visually-hidden">Войти в личный кабинет</span>
+                Войти
               </a>
-            </li>
-            <li class="navigation-menu-item">
-              <a class="navigation-menu-link navigation-card" href="#">
-                <span class="visually-hidden">Добавить в корзину</span>
-                <span class="navigation-badge">2</span>
-                Корзина
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="catalog-container">
-          <div class="navigation-link-wrapper">
-            <a class="navigation-catalog-link navigation-link-current" href="catalog.html">Каталог товаров</a>
-            <button class="catalog-field" type="button">
-              <span class="visually-hidden">Вывод каталога</span>
-            </button>
+            </div>
+            <ul class="navigation-menu-list">
+              <li class="navigation-menu-item">
+                <a class="navigation-menu-link navigation-compare" href="#">
+                  <span class="visually-hidden">Добавить в сравнение</span>
+                  Сравнить
+                </a>
+              </li>
+              <li class="navigation-menu-item">
+                <a class="navigation-menu-link navigation-card" href="#">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                  <span class="navigation-badge">2</span>
+                  Корзина
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul class="navigation-catalog-list">
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="#">Доставка</a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="#">Гарантии</a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="#">Контакты</a>
-            </li>
-          </ul>
+          <div class="catalog-container">
+            <div class="navigation-link-wrapper">
+              <a class="navigation-catalog-link navigation-link-current" href="catalog.html">Каталог товаров</a>
+              <button class="catalog-field" type="button">
+                <span class="visually-hidden">Вывод каталога</span>
+              </button>
+            </div>
+            <ul class="navigation-catalog-list">
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="#">Доставка</a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="#">Гарантии</a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="main-page main-inner">
-      <header class="inner-header">
-        <h2 class="inner-title">Моноподы для селфи</h2>
+      <header class="catalog-inner-header">
+        <h2 class="catalog-inner-title">Моноподы для селфи</h2>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -225,7 +227,7 @@
             <button class="button catalog-pagination-show-more" type="button">Загрузить ещё</button>
 
             <nav class="catalog-pagination">
-              <a class="pagination-prev pagination-disabled" href="#">
+              <a class="pagination-button pagination-prev pagination-disabled" href="#">
                 <span class="page-button previous-page edge-page">Назад</span>
               </a>
               <ul class="catalog-pagination-list">
@@ -245,7 +247,7 @@
                   <a class="catalog-pagination-link" href="#">15</a>
                 </li>
               </ul>
-              <a class="pagination-next" href="#">
+              <a class="pagination-button pagination-next" href="#">
                 <span class="page-button next-page">Вперёд</span>
               </a>
             </nav>

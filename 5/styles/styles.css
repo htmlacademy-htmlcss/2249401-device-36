@@ -24,12 +24,14 @@
 
 html {
   height: 100%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  height: 100%;
   min-height: 100%;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -43,7 +45,7 @@ body {
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.17;
   text-align: center;
   color: #000000;
   letter-spacing: 0.2em;
@@ -53,48 +55,57 @@ body {
 }
 
 .button:hover {
-  width: 280px;
+  min-width: 280px;
   text-align: left;
   color: #ffe17f;
   background-color: #000000;
 }
 
 .button-pressed {
-  width: 280px;
+  min-width: 280px;
   text-align: left;
   color: #ffe17f;
   background-color: #000000;
 }
 
 .page-header {
+  flex-shrink: 0;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   color: #000000;
 }
 
 .header-container {
-  display: flex;
-  flex-direction: column;
-  width: 1160px;
   margin: 40px auto 0;
   background-color: #ffe17f;
+  width: 100%;
+  max-width: 1160px;
+}
+
+.header-inner {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 0 60px 134px 60px;
+  width: 100%;
+  max-width: 1040px;
 }
 
 .navigation-logo {
   display: block;
-  margin: -20px auto 30px 60px;
 }
 
 .menu-container {
   display: flex;
-  width: 1040px;
-  margin: 0 auto;
   justify-content:  space-between;
   align-items: center;
 }
 
 .page-search-form {
-  width: 517px;
+  width: 100%;
+  max-width: 517px;
 }
 
 .navigation-menu-list {
@@ -120,8 +131,6 @@ body {
 
 .catalog-container {
   display: flex;
-  width: 1040px;
-  margin: 0 auto;
   justify-content: space-between;
   align-items:  center;
 }
@@ -151,19 +160,22 @@ body {
 .slider-pagination-item {
   display: flex;
   margin: 0 auto;
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
 }
 
 .slider-image-container {
   display: flex;
-  width: 560px;
+  width: 100%;
+  max-width: 560px;
   align-items: center;
 }
 
 .slider-article-container {
   display: flex;
   flex-direction: column;
-  width: 560px;
+  width: 100%;
+  max-width: 560px;
   align-items: flex-start;
   gap: 50px;
 }
@@ -200,17 +212,18 @@ body {
   padding: 0;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  line-height: 1.67;
 }
 
 .slider-info-term {
   margin: 0;
   font-size: 36px;
+  line-height: 0.83;
 }
 
 .slider-info-description {
   margin: 0;
   font-size: 18px;
+  line-height: 1.88;
   color: #444444;
 }
 
@@ -226,7 +239,8 @@ body {
   display: flex;
   margin: 0 auto;
   gap: 40px;
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   list-style: none;
 }
 
@@ -244,7 +258,8 @@ body {
 
 .services-container {
   display: flex;
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   gap: 116px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -254,7 +269,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 35px;
-  width: 287px;
+  width: 100%;
+  max-width: 287px;
   list-style: none;
 }
 
@@ -264,7 +280,8 @@ body {
   align-items: center;
   padding: 0;
   gap: 110px;
-  width: 694px;
+  width: 100%;
+  max-width: 694px;
 }
 
 .services-article {
@@ -273,7 +290,8 @@ body {
   align-items: flex-start;
   padding: 0;
   gap: 34px;
-  width: 452px;
+  width: 100%;
+  max-width: 452px;
 }
 
 .services-title {
@@ -294,7 +312,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   background-color: #f0f0f0;
 }
 
@@ -323,7 +342,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
 }
 
 .about-us {
@@ -434,7 +454,8 @@ body {
   margin: 0 auto;
   padding: 0px;
   gap: 138px;
-  width: 1158px;
+  width: 100%;
+  max-width: 1158px;
 }
 
 .subscription-text-title {
@@ -461,6 +482,7 @@ body {
 
 .page-footer {
   display: flex;
+  flex-shrink: 0;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -541,14 +563,15 @@ body {
   text-decoration: underline;
 }
 
-.inner-header {
+.catalog-inner-header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 0 auto;
   padding: 0;
   gap: 16px;
-  width: 1079px;
+  width: 100%;
+  max-width: 1079px;
 }
 
 .breadcrumbs {
@@ -559,7 +582,7 @@ body {
   gap: 16px;
 }
 
-.inner-title {
+.catalog-inner-title {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -578,7 +601,8 @@ body {
 
 .catalog-products-container {
   display: flex;
-  width: 1160px;
+  width: 100%;
+  max-width: 1160px;
   align-items: flex-start;
   margin: 0 autos;
   padding: 0;
@@ -590,7 +614,8 @@ body {
   align-items: flex-start;
   padding: 0px 0px 0px 60px;
   gap: 35px;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .catalog-right-column {
@@ -598,7 +623,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  width: 840px;
+  width: 100%;
+  max-width: 840px;
 }
 
 .catalog-products {
@@ -622,8 +648,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.42;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog-filter-title {
@@ -695,9 +720,12 @@ body {
   text-decoration: none;
 }
 
+.pagination-button {
+  text-decoration: none;
+}
+
 .edge-page {
-  color: #444444;
-  opacity: 0.3;
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .catalog-pagination-link {
@@ -707,13 +735,12 @@ body {
   font-size: 16px;
   line-height: 1.25;
   text-align: center;
-  color: #444444;
-  opacity: 0.3;
+  color: rgba(68, 68, 68, 0.3);
   text-decoration: none;
 }
 
 .pagination-current {
-  opacity: 0.6;
+  color: rgba(68, 68, 68, 0.6);
 }
 
 .visually-hidden {
