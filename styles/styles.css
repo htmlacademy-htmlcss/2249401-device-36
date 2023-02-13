@@ -496,6 +496,9 @@ body {
 .page-footer {
   display: flex;
   flex-shrink: 0;
+  align-items: center;
+  width: 100%;
+  min-height: 321px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -506,18 +509,23 @@ body {
 }
 
 .footer-address {
-  margin-left: 140px;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  margin: 62px auto auto 140px;
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
+  row-gap: 62px;
+  margin: 137px auto 61px;
 }
 
 .footer-link-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0;
   gap: 35px;
   list-style-type: none;
@@ -526,6 +534,7 @@ body {
 .footer-social-list {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   padding: 0;
   gap: 15px;
   list-style-type: none;
@@ -534,8 +543,8 @@ body {
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: 140px;
+  row-gap: 63px;
+  margin: 140px 140px 62px auto;
 }
 
 .footer-link {
@@ -580,7 +589,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 auto;
+  margin: 35px auto;
   padding: 0;
   gap: 16px;
   width: 100%;
@@ -631,7 +640,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 0 0 60px;
   gap: 35px;
   width: 100%;
   max-width: 320px;
@@ -652,6 +660,7 @@ body {
   align-items: center;
   padding: 20px 40px;
   width: 100%;
+  max-width: 760px;
 }
 
 .catalog-products {
@@ -678,6 +687,16 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.catalog-filter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+}
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 18px;
@@ -693,6 +712,12 @@ body {
   line-height: 1.25;
 }
 
+.catalog-filter-button {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+}
+
 .select-control {
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -706,7 +731,7 @@ body {
   flex-direction: column;
   align-items: center;
   row-gap: 44px;
-  max-width: 840px;
+  max-width: 760px;
   width: 100%;
   padding: 70px 40px 0;
   background-color: #ffffff;
@@ -771,14 +796,15 @@ body {
   align-items: center;
   max-width: 754px;
   width: 100%;
-  padding: 18px auto;
   background-color: #ffffff;
   border: 3px solid #e5e5e5;
 }
 
 .catalog-pagination-show-more {
+  display: block;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
+  padding: 18px;
   line-height: 1.17;
   text-align: center;
   background-color: inherit;
