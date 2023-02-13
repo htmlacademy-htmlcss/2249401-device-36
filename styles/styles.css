@@ -165,8 +165,14 @@ body {
   color: #000000;
 }
 
-.main-page {
+.main-inner {
   flex-grow: 1;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
 }
 
 .slider-pagination-item {
@@ -247,13 +253,23 @@ body {
   list-style-type: none;
 }
 
-.mini-catalog-list {
-  display: flex;
+.mini-catalog {
   margin: 0 auto;
-  gap: 40px;
   width: 100%;
   max-width: 1160px;
+}
+
+.mini-catalog-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
+}
+
+.mini-catalog-link {
+  display: inline-block;
 }
 
 .mini-catalog-image {
@@ -261,6 +277,7 @@ body {
 }
 
 .mini-catalog-title {
+  font-size: 18px;
   letter-spacing: -0.02em;
 }
 
