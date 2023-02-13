@@ -109,18 +109,21 @@ body {
 .page-search-form {
   width: 100%;
   max-width: 517px;
+  margin: 0;
+}
+
+.navigation-login-list {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  list-style-type: none;
 }
 
 .navigation-menu-list {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
   gap: 36px;
-  list-style: none;
-}
-
-.navigation-login-wrapper {
-  margin: 0 26px;
+  margin: 0;
+  list-style-type: none;
 }
 
 .navigation-menu-link {
@@ -131,6 +134,10 @@ body {
   color: #000000;
   text-align: right;
   text-decoration: none;
+}
+
+.navigation-logout {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog-container {
@@ -144,7 +151,7 @@ body {
   display: flex;
   margin-left: auto;
   gap: 45px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .navigation-catalog-link {
@@ -237,7 +244,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .mini-catalog-list {
@@ -246,7 +253,7 @@ body {
   gap: 40px;
   width: 100%;
   max-width: 1160px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .mini-catalog-image {
@@ -276,7 +283,7 @@ body {
   gap: 35px;
   width: 100%;
   max-width: 287px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .services-article-container {
@@ -390,7 +397,7 @@ body {
   font-size: 18px;
   line-height: 1.11;
   color: #444444;
-  list-style: none;
+  list-style-type: none;
 }
 
 .about-us-deliveries {
@@ -438,7 +445,7 @@ body {
 
 .contacts-schedule {
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .subscription {
@@ -513,7 +520,7 @@ body {
   align-items: center;
   padding: 0;
   gap: 35px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .footer-social-list {
@@ -521,7 +528,7 @@ body {
   align-items: flex-start;
   padding: 0;
   gap: 15px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .footer-contacts {
@@ -683,7 +690,7 @@ body {
 .product-list {
   background-color: #ffffff;
   color: #000000;
-  list-style: none;
+  list-style-type: none;
 }
 
 .product-card-title {
