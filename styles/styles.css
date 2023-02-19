@@ -198,7 +198,6 @@ body {
   max-width: 560px;
   align-items: center;
   object-fit: contain;
-  outline: 5px solid red;
 }
 
 .slider-button {
@@ -207,7 +206,6 @@ body {
 }
 
 .slider-image {
-  outline: 3px solid black;
   margin: 0;
   padding: 0;
 }
@@ -374,6 +372,10 @@ body {
 }
 
 .delivery-link {
+  display: grid;
+  grid-template-columns: 125px 910px 125px;
+  align-items: center;
+  justify-items: center;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -385,12 +387,20 @@ body {
 }
 
 .delivery-link::before{
-  content: url("../images/delivery-icon.svg");
+  content: "";
+  width: 125px;
+  height: 100px;
+  background-image: url("../images/delivery-icon.svg");
+  background-repeat: no-repeat;
   background-color: #ffe17f;
 }
 
 .delivery-link::after {
-  content: url("../images/info-button.svg");
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/info-button.svg");
+  background-repeat: no-repeat;
   background-color: #f0f0f0;
 }
 
@@ -774,9 +784,8 @@ body {
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 360px 360px;
   column-gap: 40px;
   row-gap: 44px;
   max-width: 760px;
@@ -797,6 +806,7 @@ body {
 
 .product-card-image {
   margin-bottom: 32px;
+  object-fit: contain;
 }
 
 .product-card-description {
