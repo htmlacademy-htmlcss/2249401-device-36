@@ -71,7 +71,7 @@ body {
 .container {
   width: 100%;
   max-width: 1160px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .page-header {
@@ -86,7 +86,8 @@ body {
 }
 
 .header-container {
-  margin: 40px auto 0;
+  margin-top: 40px;
+  padding: 0;
   background-color: #ffe17f;
 }
 
@@ -96,13 +97,14 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  padding: 0 60px 134px 60px;
+  margin: 0 auto;
   width: 100%;
   max-width: 1040px;
 }
 
 .navigation-logo {
   display: block;
+  margin: 0;
   max-width: 145px;
   height: auto;
 }
@@ -124,6 +126,7 @@ body {
   display: flex;
   gap: 28px;
   margin: 0;
+  margin-right: auto;
 }
 
 .navigation-menu-list {
@@ -194,22 +197,41 @@ body {
   width: 100%;
   max-width: 560px;
   align-items: center;
+  object-fit: contain;
 }
 
-.slider-article-container {
+.slider-button {
+  display: block;
+  margin: 0;
+}
+
+.slider-image {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-article {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 560px;
   align-items: flex-start;
-  gap: 50px;
+  row-gap: 50px;
+  padding: 0;
 }
 
 .slider-number {
   align-self: flex-end;
 }
 
+.article-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
 .article-text-big {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -217,11 +239,17 @@ body {
 }
 
 .article-text-small {
+  margin: 0;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   color: #444444;
+}
+
+.article-button {
+  display: block;
+  align-self: flex-start;
 }
 
 .slider-feature {
@@ -260,8 +288,8 @@ body {
 }
 
 .mini-catalog-list {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
   gap: 40px;
   padding: 0;
   margin: 0;
@@ -286,14 +314,15 @@ body {
 
 .services-container {
   display: flex;
-  gap: 116px;
   margin-bottom: 20px;
 }
 
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  row-gap: 35px;
+  padding: 0;
+  margin-right: auto;
   width: 100%;
   max-width: 287px;
 }
@@ -313,7 +342,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  gap: 34px;
+  row-gap: 34px;
   width: 100%;
   max-width: 452px;
 }
@@ -339,6 +368,10 @@ body {
 }
 
 .delivery-link {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 125px auto 125px;
+  align-items: center;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -350,12 +383,22 @@ body {
 }
 
 .delivery-link::before{
-  content: url("../images/delivery-icon.svg");
+  content: "";
+  width: 125px;
+  height: 100px;
+  background-image: url("../images/delivery-icon.svg");
+  background-repeat: no-repeat;
   background-color: #ffe17f;
 }
 
 .delivery-link::after {
-  content: url("../images/info-button.svg");
+  content: "";
+  align-self: center;
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/info-button.svg");
+  background-repeat: no-repeat;
   background-color: #f0f0f0;
 }
 
@@ -455,12 +498,14 @@ body {
 .subscription {
   display: flex;
   flex-direction: column;
+  row-gap: 144px;
+  min-height: 421px;
   background-color: #f0f0f0;
 }
 
 .subscription-text-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: last baseline;
 }
 
@@ -470,7 +515,6 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 0;
-  gap: 138px;
   width: 100%;
   max-width: 1158px;
 }
@@ -739,11 +783,9 @@ body {
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 40px;
-  row-gap: 44px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px 40px;
   max-width: 760px;
   width: 100%;
   margin: 0;
@@ -760,8 +802,12 @@ body {
   height: auto;
 }
 
-.product-card-image {
+.product-card-link {
   margin-bottom: 32px;
+}
+
+.product-card-image {
+  object-fit: contain;
 }
 
 .product-card-description {
@@ -806,6 +852,7 @@ body {
   font-size: 18px;
   padding: 18px;
   line-height: 1.17;
+  width: 100%;
   text-align: center;
   background-color: inherit;
   color: #000000;
