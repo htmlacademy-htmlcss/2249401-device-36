@@ -216,7 +216,7 @@ body {
   width: 100%;
   max-width: 560px;
   align-items: flex-start;
-  gap: 50px;
+  row-gap: 50px;
   padding: 0;
 }
 
@@ -245,11 +245,6 @@ body {
   font-size: 18px;
   line-height: 1.67;
   color: #444444;
-}
-
-.article-button-container {
-  display: flex;
-  align-items: center;
 }
 
 .article-button {
@@ -293,8 +288,8 @@ body {
 }
 
 .mini-catalog-list {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
   gap: 40px;
   padding: 0;
   margin: 0;
@@ -319,14 +314,15 @@ body {
 
 .services-container {
   display: flex;
-  gap: 116px;
   margin-bottom: 20px;
 }
 
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  row-gap: 35px;
+  padding: 0;
+  margin-right: auto;
   width: 100%;
   max-width: 287px;
 }
@@ -346,7 +342,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  gap: 34px;
+  row-gap: 34px;
   width: 100%;
   max-width: 452px;
 }
@@ -372,10 +368,10 @@ body {
 }
 
 .delivery-link {
+  width: 100%;
   display: grid;
-  grid-template-columns: 125px 910px 125px;
+  grid-template-columns: 125px auto 125px;
   align-items: center;
-  justify-items: center;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -397,6 +393,8 @@ body {
 
 .delivery-link::after {
   content: "";
+  align-self: center;
+  justify-self: center;
   width: 40px;
   height: 40px;
   background-image: url("../images/info-button.svg");
@@ -500,12 +498,14 @@ body {
 .subscription {
   display: flex;
   flex-direction: column;
+  row-gap: 144px;
+  min-height: 421px;
   background-color: #f0f0f0;
 }
 
 .subscription-text-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: last baseline;
 }
 
@@ -515,7 +515,6 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 0;
-  gap: 138px;
   width: 100%;
   max-width: 1158px;
 }
@@ -785,9 +784,8 @@ body {
 
 .product-list {
   display: grid;
-  grid-template-columns: 360px 360px;
-  column-gap: 40px;
-  row-gap: 44px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px 40px;
   max-width: 760px;
   width: 100%;
   margin: 0;
@@ -804,8 +802,11 @@ body {
   height: auto;
 }
 
-.product-card-image {
+.product-card-link {
   margin-bottom: 32px;
+}
+
+.product-card-image {
   object-fit: contain;
 }
 
