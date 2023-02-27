@@ -91,6 +91,10 @@ body {
   background-color: #ffe17f;
 }
 
+.main-page-header {
+  height: 300px;
+}
+
 .header-inner {
   position: relative;
   top: -20px;
@@ -187,6 +191,11 @@ body {
   list-style: none;
 }
 
+.slider-pagination {
+  margin: 0;
+  padding: 0;
+}
+
 .slider-pagination-item {
   display: flex;
   margin: 0 auto;
@@ -210,6 +219,24 @@ body {
   padding: 0;
 }
 
+.slider-counter {
+  position: absolute;
+  left: 1001px;
+  top: 219px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 250px;
+  height: 135px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 0.17;
+  color: #000000;
+  outline: 5px solid red;
+}
+
 .slider-article {
   display: flex;
   flex-direction: column;
@@ -218,10 +245,6 @@ body {
   align-items: flex-start;
   row-gap: 50px;
   padding: 0;
-}
-
-.slider-number {
-  align-self: flex-end;
 }
 
 .article-text-container {
