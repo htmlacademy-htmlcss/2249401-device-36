@@ -29,6 +29,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -191,6 +192,11 @@ body {
   list-style: none;
 }
 
+.slider {
+  max-width: 1160px;
+  min-height: 560px;
+}
+
 .slider-pagination {
   margin: 0;
   padding: 0;
@@ -226,6 +232,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: right;
+  margin: 0;
   width: 250px;
   height: 135px;
   font-family: "Rubik", sans-serif;
@@ -233,8 +240,7 @@ body {
   font-weight: 700;
   font-size: 180px;
   line-height: 0.17;
-  color: #000000;
-  outline: 5px solid red;
+  color: #ffffff;
 }
 
 .slider-article {
@@ -566,8 +572,6 @@ body {
 
 .page-footer {
   display: flex;
-  align-items: center;
-  padding: auto 140px;
   flex-shrink: 0;
   min-height: 321px;
   font-family: "Rubik", sans-serif;
@@ -584,35 +588,45 @@ body {
 }
 
 .footer-inner {
+  display: grid;
+  grid-template-columns: 239px 444px 175px;
+  align-items: center;
+  justify-content: space-between;
+  outline: 3px solid white;
+}
+
+.footer-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 182px;
+  outline: 3px solid red;
 }
 
-.footer-top {
+.footer-center {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 35px;
+  min-height: 123px;
+  outline: 3px solid red;
 }
 
-.footer-body {
+.footer-right {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 63px;
-}
-
-.footer-info {
-  display: flex;
-  justify-content: space-between;
+  row-gap: 63px;
+  min-height: 116px;
+  outline: 3px solid red;
 }
 
 .footer-link-list {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0;
-  gap: 35px;
+  gap: 30px;
+  outline: 3px solid red;
 }
 
 .footer-social-list {
@@ -624,6 +638,8 @@ body {
 }
 
 .footer-link {
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -919,6 +935,7 @@ body {
 }
 
 .catalog-pagination-link {
+  display: inline-block;
   padding: 10px 16.5px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
