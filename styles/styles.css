@@ -592,7 +592,6 @@ body {
   grid-template-columns: 239px 444px 175px;
   align-items: center;
   justify-content: space-between;
-  outline: 3px solid white;
 }
 
 .footer-left {
@@ -600,7 +599,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 182px;
-  outline: 3px solid red;
 }
 
 .footer-center {
@@ -608,7 +606,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 123px;
-  outline: 3px solid red;
 }
 
 .footer-right {
@@ -617,7 +614,6 @@ body {
   justify-content: space-between;
   row-gap: 63px;
   min-height: 116px;
-  outline: 3px solid red;
 }
 
 .footer-link-list {
@@ -626,7 +622,6 @@ body {
   margin: 0;
   padding: 0;
   gap: 30px;
-  outline: 3px solid red;
 }
 
 .footer-social-list {
