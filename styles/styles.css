@@ -381,7 +381,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  gap: 110px;
   width: 100%;
   max-width: 694px;
 }
@@ -396,6 +395,15 @@ body {
   max-width: 452px;
 }
 
+.services-article-container::after {
+  background-image: url(../images/delivery-image.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 136px;
+  height: 164px;
+  content: "";
+}
+
 .services-title {
   margin: 0;
   font-size: 50px;
@@ -403,7 +411,7 @@ body {
 }
 
 .services-description {
-  margin: 0 auto;
+  margin: 0;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -449,11 +457,6 @@ body {
   background-image: url("../images/info-button.svg");
   background-repeat: no-repeat;
   background-color: #f0f0f0;
-}
-
-.delivery-text {
-  display: flex;
-  justify-self: center;
 }
 
 .about-contacts-container {
