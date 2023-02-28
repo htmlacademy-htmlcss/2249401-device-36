@@ -331,6 +331,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  min-height: 253px;
 }
 
 .mini-catalog-image {
@@ -345,7 +346,6 @@ body {
 
 .services {
   position: relative;
-  outline: 5px solid black;
 }
 
 .services::after {
@@ -364,7 +364,6 @@ body {
   column-gap: 116px;
   min-height: 319px;
   margin-bottom: 72px;
-  outline: 5px solid black;
 }
 
 .services-list {
@@ -450,6 +449,11 @@ body {
   background-image: url("../images/info-button.svg");
   background-repeat: no-repeat;
   background-color: #f0f0f0;
+}
+
+.delivery-text {
+  display: flex;
+  justify-self: center;
 }
 
 .about-contacts-container {
