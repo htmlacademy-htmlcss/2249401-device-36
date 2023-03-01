@@ -112,7 +112,24 @@ body {
   display: block;
   margin: 0;
   max-width: 145px;
-  height: auto;
+}
+
+.navigation-logo:hover .logo {
+  opacity: 0.6;
+}
+
+.navigation-logo:active .logo {
+  opacity: 0.3;
+}
+
+.navigation-logo:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-logo:focus {
+    outline: 2px solid #af4fff;
+  }
 }
 
 .menu-container {
