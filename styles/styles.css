@@ -467,6 +467,7 @@ body {
 .about-us {
   display: flex;
   flex-direction: column;
+  padding-right: 23px;
 }
 
 .about-us-container {
@@ -474,15 +475,18 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  gap: 30px;
+  row-gap: 30px;
 }
 
 .about-us-title {
+  margin: 0;
+  margin-bottom: 48px;
   font-size: 50px;
   line-height: 1;
 }
 
 .about-us-text {
+  margin: 0;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -495,6 +499,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0;
   padding: 0;
   gap: 19px;
   font-family: "Rubik", sans-serif;
@@ -502,6 +507,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
+  letter-spacing: -0.02em;
   color: #444444;
 }
 
@@ -515,6 +521,7 @@ body {
 .contacts {
   display: flex;
   flex-direction: column;
+  padding-right: 18px;
 }
 
 .contacts-container {
@@ -522,15 +529,26 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  gap: 30px;
+  row-gap: 30px;
+}
+
+.contacts-container h3 {
+  margin: 0;
+}
+
+.contacts-container p {
+  margin: 0;
 }
 
 .contacts-subcontainer {
   display: flex;
   flex-direction: column;
+  row-gap: 15px;
 }
 
 .contacts-title {
+  margin: 0;
+  margin-bottom: 48px;
   font-size: 50px;
   line-height: 1;
 }
@@ -558,6 +576,7 @@ body {
 }
 
 .contacts-schedule {
+  margin: 0;
   padding: 0;
 }
 
@@ -565,7 +584,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 144px;
-  min-height: 421px;
   background-color: #f0f0f0;
 }
 
@@ -579,10 +597,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
   padding: 0;
-  width: 100%;
-  max-width: 1158px;
 }
 
 .subscription-text-title {
