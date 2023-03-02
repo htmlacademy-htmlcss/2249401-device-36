@@ -336,6 +336,47 @@ body {
 .slider-button {
   display: block;
   margin: 0;
+  padding: 0;
+  border: none;
+  height: 60px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+}
+
+.slider-button:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .slider-button:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
+.slider-button:disabled {
+  opacity: 0.1;
+}
+
+.slider-prev {
+  position: absolute;
+  top: 401px;
+  left: 170px;
+}
+
+.slider-next {
+  position: absolute;
+  top: 401px;
+  left: 680px;
 }
 
 .slider-image {
