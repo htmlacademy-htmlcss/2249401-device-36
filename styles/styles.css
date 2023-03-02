@@ -258,6 +258,7 @@ body {
 }
 
 .navigation-card .navigation-icon {
+  overflow: visible;
   top: 6px;
   bottom: 10px;
   left: 15px;
@@ -749,8 +750,6 @@ body {
   align-items: flex-start;
   padding: 0;
   row-gap: 34px;
-  width: 100%;
-  max-width: 452px;
 }
 
 .services-article-container::after {
@@ -797,24 +796,43 @@ body {
   text-decoration: none;
 }
 
-.delivery-link::before {
-  content: "";
+.delivery-icon-car {
+  fill: #000000;
+}
+
+.delivery-icon-info {
+  fill: #000000;
+  opacity: 0.3;
+}
+
+.delivery-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 125px;
   height: 100px;
-  background-image: url("../images/delivery-icon.svg");
-  background-repeat: no-repeat;
+}
+
+.delivery-icon-square {
   background-color: #ffe17f;
 }
 
-.delivery-link::after {
-  content: "";
-  align-self: center;
-  justify-self: center;
-  width: 40px;
-  height: 40px;
-  background-image: url("../images/info-button.svg");
-  background-repeat: no-repeat;
-  background-color: #f0f0f0;
+.delivery-link:hover .delivery-icon-square{
+  background-color: #ffcc33;
+}
+
+.delivery-icon-info {
+  opacity: 1;
+  fill:rgba(0, 0, 0, 0.3)
+}
+
+.delivery-link:hover .delivery-icon-info {
+  opacity: 1;
+  fill: #000000;
+}
+
+.delivery-link:active {
+  opacity: 0.3;
 }
 
 .about-contacts-container {
@@ -839,6 +857,11 @@ body {
 .about-us-title {
   margin: 0;
   margin-bottom: 48px;
+  padding-top: 47px;
+  background-image: url(../images/horizontal-line.svg);
+  background-repeat: no-repeat;
+  background-size: 84px 7px;
+  background-position: 0 0;
   font-size: 50px;
   line-height: 1;
 }
@@ -908,6 +931,11 @@ body {
 .contacts-title {
   margin: 0;
   margin-bottom: 48px;
+  padding-top: 47px;
+  background-image: url(../images/horizontal-line.svg);
+  background-repeat: no-repeat;
+  background-size: 84px 7px;
+  background-position: 0 0;
   font-size: 50px;
   line-height: 1;
 }
@@ -942,7 +970,8 @@ body {
 .subscription {
   display: flex;
   flex-direction: column;
-  row-gap: 144px;
+  min-height: 421px;
+  height: 100%;
   background-color: #f0f0f0;
 }
 
@@ -950,6 +979,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: last baseline;
+  margin: 0 auto;
+  margin-bottom: 144px;
+  padding-left: 13px;
+  padding-top: 61px;
 }
 
 .subscription-form-container {
@@ -959,21 +992,77 @@ body {
   padding: 0;
 }
 
+.subscription-form {
+  display: flex;
+}
+
 .subscription-text-title {
+  margin: 0;
+  padding: 0;
   font-size: 50px;
   line-height: 1;
 }
 
 .subscription-text {
+  margin: 0;
+  width: 560px;
+  text-align: left;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.67;;
+}
+
+.subscription-text-aside {
+  width: 128px;
+  padding-left: 32px;
+  background-image: url(../images/green-checkmark.svg);
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
 
 .subscription-button {
+  padding: 15px 36px;
   width: auto;
   background-color: #f0f0f0;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 3px solid #c4c4c4;
+}
+
+.subscription-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 18px 39px;
+  border: none;
+}
+
+.subscription-button:active {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 18px 39px;
+  border: none;
+}
+
+.subscription-button:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .subscription-button:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
 }
 
 .page-footer {
