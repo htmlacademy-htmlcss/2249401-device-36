@@ -714,7 +714,7 @@ body {
   max-width: 287px;
 }
 
-.sevices-list::after {
+.services-container::after {
   position: absolute;
   top: 0;
   left: 280px;
