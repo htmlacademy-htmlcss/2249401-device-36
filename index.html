@@ -27,15 +27,25 @@
               </label>
             </form>
             <ul class="navigation-login-list">
-              <li class="navigation-login-item">
-                <a class="navigation-menu-link navigation-login visually-hidden">
+              <li class="navigation-login-item visually-hidden">
+                <a class="navigation-menu-link navigation-login">
                   <span class="visually-hidden">Имя пользователя</span>
+                  <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    width="15" height="12" fill="none">
+                    <path fill="#000"
+                      d="M1 12h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C11 1.6 9.4 0 7.5 0S4 1.6 4 3.5c0 1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 1 12Z" />
+                  </svg>
                   Коля Петухов
                 </a>
               </li>
               <li class="navigation-login-item">
                 <a class="navigation-menu-link navigation-login" href="#">
                   <span class="visually-hidden">Войти в личный кабинет</span>
+                  <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    width="15" height="12" fill="none">
+                    <path fill="#000"
+                      d="M1 12h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C11 1.6 9.4 0 7.5 0S4 1.6 4 3.5c0 1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 1 12Z" />
+                  </svg>
                   Войти
                 </a>
               </li>
@@ -44,6 +54,17 @@
               <li class="navigation-menu-item">
                 <a class="navigation-menu-link navigation-compare" href="#">
                   <span class="visually-hidden">Добавить в сравнение</span>
+                  <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    width="10" height="12" fill="none" viewBox="0 0 10 12">
+                    <g fill="#000" clip-path="url(#a)">
+                      <path d="M6 0H4v12h2V0ZM2 4H0v8h2V4ZM10 3H8v9h2V3Z" />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h10v12H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                   Сравнить
                 </a>
               </li>
@@ -51,6 +72,18 @@
                 <a class="navigation-menu-link navigation-card" href="#">
                   <span class="visually-hidden">Добавить в корзину</span>
                   <span class="navigation-badge">2</span>
+                  <svg class="navigation-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="15" fill="none" viewBox="0 0 16 15">
+                    <g clip-path="url(#a)">
+                      <path fill="#000"
+                        d="m15.3 5.79-3.5.2-3.2-4.9c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.69l2.2 3.2H5.9L8 2.69Z" />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 .79h16v14H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                   Корзина
                 </a>
               </li>
@@ -105,7 +138,9 @@
                 </p>
               </div>
 
-              <a class="button article-button" href="#">Подробнее</a>
+              <a class="button based-button" href="#">
+                <p class="button-text based-button-text">Подробнее</p>
+              </a>
 
               <ul class="slider-info">
                 <li class="slider-feature">
@@ -140,9 +175,9 @@
                   занятия и соблюдать диету.</p>
               </div>
 
-              <div class="article-button-container">
-                <a class="button article-button" href="#">Подробнее</a>
-              </div>
+              <a class="button based-button" href="#">
+                <p class="button-text based-button-text">Подробнее</p>
+              </a>
 
               <ul class="slider-info">
                 <li class="slider-feature">
@@ -174,9 +209,9 @@
                 </p>
               </div>
 
-              <div class="article-button-container">
-                <a class="button article-button" href="#">Подробнее</a>
-              </div>
+              <a class="button based-button" href="#">
+                <p class="button-text based-button-text">Подробнее</p>
+              </a>
 
               <ul class="slider-info">
                 <li class="slider-feature">
@@ -301,7 +336,9 @@
                 ТоксБерри
               </li>
             </ul>
-            <a class="button" href="#">Подробнее о нас</a>
+            <a class="button about-us-button" href="#">
+              <p class="button-text about-us-button-text">Подробнее о нас</p>
+            </a>
           </div>
         </section>
 
@@ -328,7 +365,9 @@
                 <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
               </ul>
             </div>
-            <a class="button" href="#">Напишите нам</a>
+            <a class="button contacts-button" href="#">
+              <p class="button-text contacts-button-text">Напишите нам</p>
+            </a>
           </div>
         </section>
       </div>
@@ -346,7 +385,7 @@
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscription-field" type="email" name="subscription-email" id="subscription-field"
               placeholder="Ваш e-mail">
-            <button class="button subscription-button" type="submit">
+            <button class="subscription-button" type="submit">
               Подписаться
             </button>
           </form>
