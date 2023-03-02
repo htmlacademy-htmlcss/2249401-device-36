@@ -444,6 +444,7 @@ body {
 }
 
 .slider-indicator-item {
+  position: relative;
   display: flex;
 }
 
@@ -459,6 +460,39 @@ body {
 
 .slider-pagination-button-current {
   background-color: #000000;
+}
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:active {
+  opacity: 0.3;
+}
+
+.slider-pagination-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  content: "";
+}
+
+.slider-pagination-button:focus-visible.slider-pagination-button::after{
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .slider-pagination-button:focus-visible.slider-pagination-button::after{
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
+.slider-pagination-button:disabled {
+  opacity: 0.1;
 }
 
 .mini-catalog-list {
