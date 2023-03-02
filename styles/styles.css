@@ -351,6 +351,13 @@ body {
   outline-offset: 2px;
 }
 
+@supports not selector(:focus-visible) {
+  .catalog-field:focus{
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
 .navigation-catalog-list {
   display: flex;
   padding: 0;
@@ -644,6 +651,26 @@ body {
   background-color: #ffe17f;
 }
 
+.mini-catalog-link:hover .mini-catalog-image{
+  background-color: #ffcc33;
+}
+
+.mini-catalog-link:active {
+  opacity: 0.3;
+}
+
+.mini-catalog-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .mini-catalog-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
 .mini-catalog-title {
   margin: 0;
   font-size: 18px;
@@ -917,11 +944,6 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
-}
-
-.subscription-text-aside::before {
-  content: url("../images/button-checkmark.svg");
-  color: #08af00;
 }
 
 .subscription-button {
