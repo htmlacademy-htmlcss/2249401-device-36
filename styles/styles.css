@@ -70,7 +70,7 @@ body {
   width: 220px;
 }
 
-.services-button{
+.services-button {
   width: 160px;
   border: none;
   padding: 10px 0;
@@ -343,21 +343,21 @@ body {
   border-radius: 50%;
 }
 
-.catalog-field:hover .badge-wrapper{
+.catalog-field:hover .badge-wrapper {
   opacity: 1;
 }
 
-.catalog-field:active .badge-wrapper{
+.catalog-field:active .badge-wrapper {
   opacity: 1;
 }
 
-.catalog-field:focus-visible{
+.catalog-field:focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
-  .catalog-field:focus{
+  .catalog-field:focus {
     outline: 2px solid #af4fff;
     outline-offset: 2px;
   }
@@ -371,6 +371,7 @@ body {
 }
 
 .navigation-catalog-link {
+  position: relative;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -399,9 +400,17 @@ body {
   }
 }
 
-.active-link {
-  padding-bottom: 6px;
-  border-bottom: 1px solid #000000;
+.navigation-catalog-link::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+}
+
+.active-link.navigation-catalog-link::after {
+  background-color: #000000;
 }
 
 .main-inner {
@@ -656,7 +665,7 @@ body {
   background-color: #ffe17f;
 }
 
-.mini-catalog-link:hover .mini-catalog-image{
+.mini-catalog-link:hover .mini-catalog-image {
   background-color: #ffcc33;
 }
 
@@ -817,13 +826,13 @@ body {
   background-color: #ffe17f;
 }
 
-.delivery-link:hover .delivery-icon-square{
+.delivery-link:hover .delivery-icon-square {
   background-color: #ffcc33;
 }
 
 .delivery-icon-info {
   opacity: 1;
-  fill:rgba(0, 0, 0, 0.3)
+  fill: rgba(0, 0, 0, 0.3)
 }
 
 .delivery-link:hover .delivery-icon-info {
@@ -1010,7 +1019,8 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.67;;
+  line-height: 1.67;
+  ;
 }
 
 .subscription-text-aside {
@@ -1085,23 +1095,40 @@ body {
 .footer-inner {
   display: grid;
   grid-template-columns:
-    /* 239px 444px 175px; */
-    28% 50% 20%;
-  align-items: center;
+    239px 444px 239px;
   justify-content: space-between;
 }
 
 .footer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin-top: 62px;
+  margin-bottom: 77px;
   min-height: 182px;
+}
+
+.footer-left .navigation-logo {
+  margin-bottom: 35px;
+}
+
+.footer-address-text {
+  font-style: normal;
+  margin-bottom: 64px;
+}
+
+.footer-left::after {
+  display: flex;
+  background-color: #ffc500;
+  width: 80px;
+  height: 7px;
+  background-position: 0 100%;
+  content: "";
 }
 
 .footer-center {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 137px;
+  margin-bottom: 61px;
   min-height: 123px;
 }
 
@@ -1110,26 +1137,32 @@ body {
   flex-direction: column;
   justify-content: space-between;
   row-gap: 63px;
+  padding-left: 64px;
+  margin-top: 140px;
+  margin-bottom: 65px;
   min-height: 116px;
 }
 
 .footer-link-list {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  gap: 30px;
 }
 
 .footer-social-list {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0;
   gap: 15px;
 }
 
 .footer-link {
+  position: relative;
+  display: flex;
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
@@ -1144,19 +1177,105 @@ body {
   text-transform: uppercase;
 }
 
-.telegram {
-  background-image: url("../images/icon-telegram.svg");
-  background-repeat: no-repeat;
+.footer-link::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
 }
 
-.twitter {
-  background-image: url("../images/icon-twitter.svg");
-  background-repeat: no-repeat;
+.footer-link:hover {
+  color: rgba(255, 199, 0.1);
 }
 
-.youtube {
-  background-image: url("../images/icon-youtube.svg");
-  background-repeat: no-repeat;
+.footer-link:hover.footer-link::after{
+  background-color: rgba(255, 199, 0.1);
+}
+
+.footer-link:active {
+  opacity: 0.3;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible)  {
+  .footer.link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
+}
+
+.footer-social-item {
+  position: relative;
+}
+
+.social-button {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill-opacity: 0.6;
+}
+
+.social-button:hover {
+  background-color: rgba(255, 199, 0.1);
+}
+
+.social-button:active {
+  background-color:  rgba(255, 199, 0.1);
+}
+
+.social-button:active .social-icon {
+fill-opacity: 0.3;
+}
+
+.social-button::after {
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ width: 40px;
+ height: 40px;
+ content: "";
+}
+
+.social-button:focus-visible {
+  outline: #444444;
+}
+
+@supports not selector(:focus-visible) {
+  .social-button:focus {
+    outline: #444444;
+  }
+}
+
+.social-button:focus-visible.social-button::after {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .social-button:focus.social-button::after {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
 }
 
 .footer-contacts-phone {
@@ -1167,6 +1286,46 @@ body {
   line-height: 1.25;
   color: #ffffff;
   text-decoration: underline;
+}
+
+.footer-contacts-phone:hover {
+  color: rgba(255, 199, 0.1);
+}
+
+.footer-contacts-phone:active {
+  opacity: 0.3;
+}
+
+.footer-contacts-phone:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+@supports not selector(:focus-visible) {
+  .footer-contacts-phone:focus {
+    outline: 2px solid #af4fff;
+  }
+}
+
+.footer-contacts-link {
+  display: flex;
+  align-self: flex-end;
+}
+
+.academy-logo path {
+  fill: #ffc700;
+}
+
+.academy-logo:hover path {
+  fill: #ffffff;
+}
+
+.academy-logo:active path {
+  opacity: 0.3;
+}
+
+.footer-contacts-link:focus-visible{
+  outline: 1px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .catalog-inner-header {
