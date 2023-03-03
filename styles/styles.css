@@ -1694,6 +1694,11 @@ fill-opacity: 0.3;
   opacity: 0.3;
 }
 
+.catalog-pagination-show-more:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .page-button {
   display: flex;
   align-items: center;
