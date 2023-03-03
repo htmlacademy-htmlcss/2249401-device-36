@@ -101,21 +101,21 @@ body {
   z-index: 0;
 }
 
-.button:hover {
+.button:not(.product-card-button):hover {
   background-color: #ffe17f;
 }
 
-.button:active {
+.button:not(.product-card-button):active {
   background-color: #ffcc33;
 }
 
-.button:focus-visible {
+.button:not(.product-card-button):focus-visible {
   outline: 2px solid #af4fff;
   outline-offset: -2px;
 }
 
 @supports not selector(:focus-visible) {
-  .button.focus {
+  .button:not(.product-card-button):focus {
     outline: 2px solid #af4fff;
     outline-offset: -2px;
   }
@@ -1495,11 +1495,61 @@ fill-opacity: 0.3;
 }
 
 .select-control {
+  display: flex;
+  max-width: 141px;
+  width: 100%;
+  border: none;
+  background-color: inherit;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
+}
+
+.select-control option {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.sorting-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+}
+
+.sorting-arrow-up {
+  transform: rotate(180deg);
+}
+
+.sorting-arrow {
+  fill-opacity: 0.2;
+}
+
+.sorting-arrow:hover {
+  fill-opacity: 0.5;
+}
+
+.sorting-arrow:active {
+  fill-opacity: 1;
+}
+
+.sorting-button:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .sorting-button:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+  }
 }
 
 .product-frame-container {
@@ -1525,6 +1575,7 @@ fill-opacity: 0.3;
 }
 
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -1533,11 +1584,47 @@ fill-opacity: 0.3;
   height: auto;
 }
 
+.product-card-button-wrapper {
+  position: absolute;
+  top: 170px;
+  left: 70px;
+  right: 70px;
+  margin: 0;
+  z-index: -1;
+}
+
+.product-card:hover .product-card-image{
+  opacity: 0.6;
+}
+
+.product-card:hover .product-card-title {
+  opacity: 0.6;
+}
+
+.product-card:hover .product-card-button-wrapper {
+  z-index: 1;
+}
+
+.product-card:active .product-card-description{
+  opacity: 0.3;
+}
+
+.product-card:active .button.product-card-button::after {
+  background-color: #ffc700;
+}
+
+.product-card-link:focus-visible {
+  outline: 1px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .product-card-link {
-  margin-bottom: 32px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .product-card-image {
+  display: flex;
   object-fit: contain;
 }
 
@@ -1545,6 +1632,7 @@ fill-opacity: 0.3;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 32px;
 }
 
 .product-card-title {
