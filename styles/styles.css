@@ -69,28 +69,39 @@ body {
   width: 160px;
   border: none;
   padding: 10px 0;
+  cursor: pointer;
 }
 
 .services-button-active {
   position: relative;
-  display: flex;
-  justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 120px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  color: #000000;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  width: 287px;
+  width: 280px;
+  color: #ffe17f;
+  background-color: #000000;
+  z-index: 2;
 }
 
-.services-button-active:hover .services-button-active-text {
-  background-color: #000000;
+.services-button-active:hover {
+  padding-left: 35px;
+}
+
+.services-button-active:active {
+  padding-left: 35px;
+}
+
+.services-button-active:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .about-us-button {
@@ -605,6 +616,8 @@ body {
   flex-direction: column;
   row-gap: 32px;
   min-height: 253px;
+  text-decoration: none;
+  color: #000000;
 }
 
 .mini-catalog-image {
@@ -644,6 +657,11 @@ body {
   z-index: -1;
 }
 
+.services-list-slider {
+  margin: 0;
+  padding: 0;
+}
+
 .services-container {
   position: relative;
   display: flex;
@@ -676,20 +694,11 @@ body {
   content: "";
 }
 
-.services-button-active {
-  color: #ffe17f;
-  background-color: #000000;
-  padding-right: 120px;
-  z-index: 2;
-}
-
 .services-article-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  width: 100%;
-  max-width: 694px;
 }
 
 .services-article {
@@ -700,12 +709,45 @@ body {
   row-gap: 34px;
 }
 
-.services-article-container::after {
+.services-delivery-container {
+  width: 100%;
+  max-width: 694px;
+}
+
+.services-guarantee-container {
+  width: 100%;
+  max-width: 729px;
+}
+
+.services-lawn-container {
+  width: 100%;
+  max-width: 729px;
+}
+
+.services-delivery-container::after {
   background-image: url(../images/delivery-image.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 136px;
   height: 164px;
+  content: "";
+}
+
+.services-guarantee-container::after {
+  background-image: url(../images/guarantee-image.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 171px;
+  height: 195px;
+  content: "";
+}
+
+.services-lawn-container::after {
+  background-image: url(../images/lawn-image.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 156px;
+  height: 188px;
   content: "";
 }
 
@@ -803,16 +845,24 @@ body {
 }
 
 .about-us-title {
+  position: relative;
   margin: 0;
   margin-bottom: 48px;
   padding-top: 47px;
-  background-image: url(../images/horizontal-line.svg);
-  background-repeat: no-repeat;
-  background-size: 84px 7px;
-  background-position: 0 0;
   font-size: 50px;
   line-height: 1;
 }
+
+.about-us-title::before {
+  position: absolute;
+  width: 84px;
+  height: 7px;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  content: "";
+}
+
 
 .about-us-text {
   margin: 0;
@@ -844,8 +894,15 @@ body {
   display: flex;
   align-items: center;
   padding: 0;
-  padding-left: 34px;
   gap: 26px;
+}
+
+.about-us-delivery-item::before {
+  width: 8px;
+  height: 8px;
+  background-color: #ffc700;
+  border-radius: 50%;
+  content: "";
 }
 
 .contacts {
@@ -877,15 +934,22 @@ body {
 }
 
 .contacts-title {
+  position: relative;
   margin: 0;
   margin-bottom: 48px;
   padding-top: 47px;
-  background-image: url(../images/horizontal-line.svg);
-  background-repeat: no-repeat;
-  background-size: 84px 7px;
-  background-position: 0 0;
   font-size: 50px;
   line-height: 1;
+}
+
+.contacts-title::before {
+  position: absolute;
+  width: 84px;
+  height: 7px;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  content: "";
 }
 
 .contacts-subtitle {

@@ -162,10 +162,12 @@
               </ul>
             </article>
             <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><button
+              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
                   class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-              <li class="slider-indicator-item"><button class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><button class="slider-pagination-button" type="button"></button></li>
+              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
+                  class="slider-pagination-button" type="button"></button></li>
+              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
+                  class="slider-pagination-button" type="button"></button></li>
             </ul>
           </li>
           <li class="slider-pagination-item visually-hidden">
@@ -206,10 +208,12 @@
               </ul>
             </article>
             <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><button class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><button
+              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
+                  class="slider-pagination-button" type="button"></button></li>
+              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
                   class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-              <li class="slider-indicator-item"><button class="slider-pagination-button" type="button"></button></li>
+              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
+                  class="slider-pagination-button" type="button"></button></li>
             </ul>
           </li>
           <li class="slider-pagination-item visually-hidden">
@@ -261,9 +265,11 @@
               </ul>
             </article>
             <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><button class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><button class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><button
+              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
+                  class="slider-pagination-button" type="button"></button></li>
+              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
+                  class="slider-pagination-button" type="button"></button></li>
+              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
                   class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
             </ul>
           </li>
@@ -273,42 +279,42 @@
         <h2 class="visually-hidden">Мини-каталог</h2>
         <ul class="mini-catalog-list">
           <li class="mini-catalog-section">
-            <a class="mini-catalog-link">
+            <a class="mini-catalog-link" href="#">
               <img class="mini-catalog-image" src="images/catalog-images-1.svg" alt="VR-очки" width="160" height="160"
                 loading="lazy">
               <h3 class="mini-catalog-title">Виртуальная<br> реальность</h3>
             </a>
           </li>
           <li class="mini-catalog-section">
-            <a class="mini-catalog-link">
+            <a class="mini-catalog-link" href="#">
               <img class="mini-catalog-image" src="images/catalog-images-2.svg" alt="Селфи-палка" width="160"
                 height="160" loading="lazy">
               <h3 class="mini-catalog-title">Моноподы<br> для селфи</h3>
             </a>
           </li>
           <li class="mini-catalog-section">
-            <a class="mini-catalog-link">
+            <a class="mini-catalog-link" href="#">
               <img class="mini-catalog-image" src="images/catalog-images-3.svg" alt="Экшн-камера" width="160"
                 height="160" loading="lazy">
               <h3 class="mini-catalog-title">Экшн-камеры</h3>
             </a>
           </li>
           <li class="mini-catalog-section">
-            <a class="mini-catalog-link">
+            <a class="mini-catalog-link" href="#">
               <img class="mini-catalog-image" src="images/catalog-images-4.svg" alt="Фитнес-браслет" width="160"
                 height="160" loading="lazy">
               <h3 class="mini-catalog-title">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="mini-catalog-section">
-            <a class="mini-catalog-link">
+            <a class="mini-catalog-link" href="#">
               <img class="mini-catalog-image" src="images/catalog-images-5.svg" alt="Умные часы" width="160"
                 height="160" loading="lazy">
               <h3 class="mini-catalog-title">Умные часы</h3>
             </a>
           </li>
           <li class="mini-catalog-section">
-            <a class="mini-catalog-link">
+            <a class="mini-catalog-link" href="#">
               <img class="mini-catalog-image" src="images/catalog-images-6.svg" alt="Квадрокоптер" width="160"
                 height="160" loading="lazy">
               <h3 class="mini-catalog-title">Квадрокоптеры</h3>
@@ -317,33 +323,89 @@
         </ul>
       </section>
       <section class="services">
-        <div class="services-container container">
-          <ul class="services-list">
-            <li class="services-item">
-              <button class="services-button services-button-active" type="button">
-                Доставка
-              </button>
-            </li>
-            <li class="services-item">
-              <button class="button services-button" type="button">
-                Гарантия
-              </button>
-            </li>
-            <li class="services-item">
-              <button class="button services-button" type="button">
-                Кредит
-              </button>
-            </li>
-          </ul>
-          <div class="services-article-container">
-            <article class="services-article">
-              <h2 class="services-title">Доставка</h2>
-              <p class="services-description">Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно! Ведь<br>
-                мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </article>
-          </div>
-        </div>
+        <ul class="services-list-slider">
+          <li class="services-container services-delivery-item container">
+            <ul class="services-list">
+              <li class="services-item">
+                <button class="services-button services-button-active" type="button">
+                  Доставка
+                </button>
+              </li>
+              <li class="services-item">
+                <button class="button services-button" type="button">
+                  Гарантия
+                </button>
+              </li>
+              <li class="services-item">
+                <button class="button services-button" type="button">
+                  Кредит
+                </button>
+              </li>
+            </ul>
+            <div class="services-article-container services-delivery-container">
+              <article class="services-article">
+                <h2 class="services-title">Доставка</h2>
+                <p class="services-description">Мы с удовольствием доставим ваш товар прямо<br>
+                  к вашему подъезду совершенно бесплатно! Ведь<br>
+                  мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </article>
+            </div>
+          </li>
+          <li class="services-container services-guarantee-item container visually-hidden">
+            <ul class="services-list">
+              <li class="services-item">
+                <button class="button services-button" type="button">
+                  Доставка
+                </button>
+              </li>
+              <li class="services-item">
+                <button class="services-button services-button-active" type="button">
+                  Гарантия
+                </button>
+              </li>
+              <li class="services-item">
+                <button class="button services-button" type="button">
+                  Кредит
+                </button>
+              </li>
+            </ul>
+            <div class="services-article-container services-guarantee-container">
+              <article class="services-article">
+                <h2 class="services-title">Гарантия</h2>
+                <p class="services-description">Если из-за возгорания купленного у нас товара у вас<br>
+                  сгорит дом — не переживайте, мы выдадим вам новый.<br>
+                  Товар, не дом, конечно же.</p>
+              </article>
+            </div>
+          </li>
+          <li class="services-container services-lawn-item container visually-hidden">
+            <ul class="services-list">
+              <li class="services-item">
+                <button class="button services-button" type="button">
+                  Доставка
+                </button>
+              </li>
+              <li class="services-item">
+                <button class="button services-button" type="button">
+                  Гарантия
+                </button>
+              </li>
+              <li class="services-item">
+                <button class="services-button services-button-active" type="button">
+                  Кредит
+                </button>
+              </li>
+            </ul>
+            <div class="services-article-container services-lawn-container">
+              <article class="services-article">
+                <h2 class="services-title">Кредит</h2>
+                <p class="services-description">Залезть в долговую яму стало проще! Кредитные<br>
+                  консультанты подберут для вас наиболее выгодные<br>
+                  условия кредита. Выгодные для банка, разумеется.</p>
+              </article>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section class="delivery container">
