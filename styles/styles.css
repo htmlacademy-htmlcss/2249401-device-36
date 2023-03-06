@@ -309,6 +309,18 @@ body {
   line-height: 1.25;
 }
 
+.popover::before {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/popover-triangle.svg);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 6px;
+  content: "";
+}
+
 .popover-content {
   height: 100%;
 }
