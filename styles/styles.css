@@ -1341,7 +1341,8 @@ body {
 
 .breadcrumbs-item:not(:last-of-type) {
   padding-right: 20px;
-  background-image: url(../images/nav-arrow.svg);
+  background-image: url(../images/catalog-page-images/nav-arrow.svg);
+  fill-opacity: 0.2;
   background-repeat: no-repeat;
   background-size: 4px 7px;
   background-position: 100% 50%;
