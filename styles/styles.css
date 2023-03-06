@@ -234,7 +234,7 @@ body {
   background-color: #ffffff;
   top: 4.5px;
   bottom: 4.5px;
-  left: 123px;
+  left: -16px;
   right: 0;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -257,6 +257,10 @@ body {
   padding: 0;
   max-width: 240px;
   width: 100%;
+}
+
+.navigation-menu-item:last-of-type {
+  position: relative;
 }
 
 .navigation-menu-link {
@@ -289,13 +293,159 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.catalog-container {
+.popover {
+  position: absolute;
+  top: 36px;
+  right: -77px;
+  z-index: 1;
+  width: 320px;
+  min-height: 301px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #000000;
+  line-height: 1.25;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.cart-items-list {
+  padding: 20px;
+  padding-bottom: 0;
+  row-gap: 1px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+.cart-item:not(:first-child) {
+  padding-top: 20px;
+}
+
+.popover-link {
+  display: flex;
+  align-items: center;
+  column-gap: 23px;
+  height: 43px;
+}
+
+.popover-link:hover {
+  opacity: 0.6;
+}
+
+.popover-link:active {
+  opacity: 0.3;
+}
+
+.popover-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.delete-button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-image: url(../images/popover-cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.delete-button:hover {
+  opacity: 0.6;
+}
+
+.delete-button:active {
+  opacity: 0.3;
+}
+
+.delete-button:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  min-height: 44px;
+  height: 100%;
+  background-color: #1a1a1a;
+}
+
+.total-payment {
+  margin: 0;
+}
+
+.popover-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 14.5px 0;
+  height: 21px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.popover-button:hover {
+  background-color: #ffe17f;
+}
+
+.popover-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.popover-button:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.popover-button:disabled {
+  color:  rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+.navigation-catalog-item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-catalog-item:first-of-type {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-right: auto;
 }
 
+.navigation-catalog-item:focus-within .navigation-subcatalog-list {
+  display: block;
+}
+
+ .navigation-subcatalog-list {
+  display: none;
+ }
 
 .catalog-field {
   position: relative;
@@ -315,6 +465,7 @@ body {
   background-color: #ffe17f;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .badge-wrapper {
