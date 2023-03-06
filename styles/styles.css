@@ -314,6 +314,7 @@ body {
   color: #000000;
   background-color: #ffe17f;
   border: none;
+  cursor: pointer;
 }
 
 .badge-wrapper {
@@ -400,7 +401,8 @@ body {
 
 .slider {
   max-width: 1160px;
-  min-height: 410px;
+  min-height: 560px;
+  margin-top: -150px;
 }
 
 .slider-pagination {
@@ -409,9 +411,20 @@ body {
 }
 
 .slider-pagination-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+}
+
+.slider-button-list {
+  position: absolute;
+  top: 211px;
+  left: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 530px;
+  padding: 0;
 }
 
 .slider-button {
@@ -420,8 +433,9 @@ body {
   padding: 0;
   border: none;
   height: 60px;
-  background-color: #ffffff;
+  background-color: inherit;
   z-index: 1;
+  cursor: pointer;
 }
 
 .slider-button:hover {
@@ -441,30 +455,15 @@ body {
   opacity: 0.1;
 }
 
-.slider-prev {
-  position: absolute;
-  top: 401px;
-  left: 170px;
-}
-
-.slider-next {
-  position: absolute;
-  top: 401px;
-  left: 680px;
-}
-
 .slider-image {
-  position: absolute;
-  left: 140px;
-  top: 190px;
   margin: 0;
   padding: 0;
 }
 
 .slider-counter {
   position: absolute;
-  right: 189px;
-  top: 219px;
+  right: 49px;
+  top: 29px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -481,8 +480,9 @@ body {
 
 .slider-article {
   position: absolute;
-  right: 140px;
-  top: 311px;
+  left: 100%;
+  top: 121px;
+  transform: translateX(-100%);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -548,11 +548,13 @@ body {
 
 .slider-indicator-list {
   position: absolute;
-  left: 682px;
-  top: 738px;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -568,7 +570,7 @@ body {
   width: 12px;
   height: 12px;
   padding: 0;
-  background-color: #ffffff;
+  background-color: inherit;
   border: 2px solid #000000;
   border-radius: 50%;
 }
