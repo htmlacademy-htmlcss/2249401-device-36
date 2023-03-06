@@ -1385,9 +1385,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 35px;
-  width: 100%;
-  max-width: 320px;
+  row-gap: 35px;
 }
 
 .catalog-right-column {
@@ -1409,12 +1407,193 @@ body {
   min-height: 70px;
 }
 
+.catalog-products-title.sorting-title {
+  padding-left: 0;
+}
+
 .catalog-products {
   background-color: #f0f0f0;
   color: #000000;
 }
 
+.price-range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 11px;
+  background-color: #dcdcdc;
+}
+
+.price-range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.price-range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.price-range-toggle::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  content: "";
+}
+
+.toggle-min {
+  top: -8px;
+  left: -9px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -9px;
+}
+
+.price-range-toggle:hover {
+  opacity: 0.5;
+}
+
+.price-range-toggle:active {
+  background-color: #000000;
+}
+
+.price-range-toggle:focus-visible.price-range-toggle::after {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.price-input-wrapper {
+  position: relative;
+  height: 18px;
+}
+
+.range-value {
+  position: absolute;
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+  height: 18px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.price-range-input {
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  max-width: 35px;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.price-range-input::-webkit-outer-spin-button,
+.price-range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+  padding: 0;
+  margin: 0;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control:disabled {
+  opacity: 0.1;
+}
+
+.control:focus-visible .control-mark{
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  border-color: #000000;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/catalog-page-images/black-checkmark.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+}
+
+.radio-list {
+  row-gap: 20px;
+}
+
+.control-input[type="radio"] + .control-mark{
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark {
+  border-color: #000000;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  content: "";
+}
+
 .catalog-products-title {
+  margin: 0;
+  padding: 25px 0;
+  padding-left: 60px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -1424,29 +1603,44 @@ body {
   text-transform: uppercase;
 }
 
-.catalog-price-filter .range-value {
-  font-family: "Rubik", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.42;
-  color: rgba(0, 0, 0, 0.3);
-}
-
 .catalog-filter {
   display: flex;
   flex-direction: column;
-  row-gap: 35px;
+  row-gap: 37px;
+  width: 200px;
+  padding: 0 60px 0 60px;
 }
 
 .catalog-filter-title {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  padding-top: 12px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.02em;
 }
 
+.price-range-title{
+  margin-bottom: 28px;
+}
+
+.catalog-filter-title::before {
+  position: absolute;
+  top: -2px;
+  background-color: #000000;
+  width: 100%;
+  height: 2px;
+  content: "";
+}
+
 .catalog-filter-group {
+  padding: 0;
+  margin: 0;
+  border: none;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1459,14 +1653,28 @@ body {
   max-width: 220px;
   width: 100%;
   border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 60px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 141px;
 }
 
 .select-control {
   display: flex;
-  max-width: 141px;
+  padding-right: 32px;
   width: 100%;
   border: none;
+  background-image: url(../images/catalog-page-images/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 11px center;
   background-color: inherit;
+  appearance: none;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1480,6 +1688,10 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
+}
+
+.sorting-buttons {
+  display: flex;
 }
 
 .sorting-button {
@@ -1499,11 +1711,11 @@ body {
   fill-opacity: 0.2;
 }
 
-.sorting-arrow:hover {
+.sorting-button:hover {
   fill-opacity: 0.5;
 }
 
-.sorting-arrow:active {
+.sorting-button:active {
   fill-opacity: 1;
 }
 
@@ -1597,7 +1809,7 @@ body {
 
 .product-card-title {
   margin: 0;
-  max-width: 201px;
+  max-width: 200.7px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
