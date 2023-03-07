@@ -670,6 +670,39 @@
 
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <section class="modal-content">
+        <div class="modal-title-wrapper">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <button class="modal-close-button" type="button"></button>
+        </div>
+        <form class="modal-form" action="#" method="post">
+          <div class="modal-row first-row">
+            <p class="modal-form-group modal-login">
+              <label for="login" class="modal-form-title">Ваше имя:</label>
+              <input class="modal-field" type="text" id="login" placeholder="Введите имя">
+            </p>
+            <p class="modal-form-group modal-mail modal-error">
+              <label for="mail" class="modal-form-title">Ваш e-mail:</label>
+              <input class="modal-field" type="email" id="mail" placeholder="Введите e-mail" value="почта">
+            </p>
+          </div>
+          <div class="modal-row second-row">
+            <p class="modal-form-group modal-free-text">
+              <label for="free-text" class="modal-form-title">Что нужно привезти:</label>
+              <input class="modal-field" type="text" id="free-text" placeholder="В свободной форме">
+            </p>
+            <p class="modal-form-group modal-number">
+              <label for="number" class="modal-form-title">Количество</label>
+              <input class="modal-field" type="number" id="number" value="1">
+            </p>
+          </div>
+        </form>
+        <button type="submit" class="button based-button modal-button">Отправить</button>
+      </section>
+    </div>
+
   </body>
 
 </html>
