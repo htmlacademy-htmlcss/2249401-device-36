@@ -1352,8 +1352,20 @@ body {
   line-height: 1.67;
 }
 
-.subscription-field {
+.subscription-field::placeholder {
   color: rgba(68, 68, 68, 0.5);
+}
+
+.subscription-field:focus-visible {
+  background-color: #dcdcdc;
+}
+
+.subscription-field.error {
+  border-color: #ff3d3d;
+}
+
+.subscription-field:disabled {
+  opacity: 0.3;
 }
 
 .subscription-text-title {
@@ -1434,7 +1446,9 @@ body {
   z-index: 3;
 }
 
-.modal-container-close {}
+.modal-container-close {
+  display: none;
+}
 
 .modal-content {
   display: flex;
