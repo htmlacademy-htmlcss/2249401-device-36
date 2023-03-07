@@ -694,7 +694,17 @@
               <input class="modal-field" type="text" id="free-text" placeholder="В свободной форме">
             </p>
             <p class="modal-form-group modal-number">
-              <label for="number" class="modal-form-title">Количество</label>
+              <span class="modal-form-title label-icon">
+                <label for="number" class="modal-form-title">Количество:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти,<br> сколько нужно.<br>
+                    Привезём сколько получится по<br>
+                    требованиям<br>
+                    к провозу багажа.</span>
+                </span>
+              </span>
               <input class="modal-field" type="number" id="number" value="1">
             </p>
           </div>
