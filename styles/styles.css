@@ -1333,6 +1333,25 @@ body {
 
 .subscription-form {
   display: flex;
+  width: fit-content;
+}
+
+input[type="email"] {
+  width: 541px;
+  padding: 0;
+  padding-left: 16px;
+  border: none;
+  border-bottom: 3px solid #c4c4c4;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+input[type="email"]::placeholder {
+  color: rgba(68, 68, 68, 0.5);
 }
 
 .subscription-text-title {
