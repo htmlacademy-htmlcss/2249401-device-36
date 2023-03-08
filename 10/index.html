@@ -18,10 +18,9 @@
               height="36" loading="lazy">
           </a>
           <div class="menu-container">
-            <form class="page-search-form" action="#" method="post">
-              <label>
-                <input class="field" type="search" id="field" name="field" placeholder="Поиск по сайту"><label
-                  for="field"></label>
+            <form class="page-search-form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="search-field-label">
+                <input class="field" type="search" id="field" name="field" placeholder="Поиск по сайту">
                 <button type="submit" class="search-button">Найти</button>
               </label>
             </form>
@@ -86,20 +85,30 @@
                     <h2 class="visually-hidden">Корзина</h2>
                     <ul class="cart-items-list">
                       <li class="cart-item">
-                        <a class="popover-link"><img class="small-product" src="/images/product-small-1.jpg" width="39"
-                            height="43" loading="lazy">
-                          <p class="cart-item-title">Любительская<br> селфи-палка</p>
+                        <a class="popover-link"><img class="small-product" src="/images/product-small-1.jpg"
+                            alt="любительская селфи-палка" width="39" height="43" loading="lazy">
+                          <span class="cart-item-title">Любительская<br> селфи-палка</span>
                         </a>
-                        <button class="delete-button" type="button"><span class="visually-hidden">Удалить из
-                            корзины</span></button>
+                        <button class="delete-button" type="button" aria-label="Удалить товар из корзины">
+                          <svg class="delete-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none"
+                            title="Удалить товар из корзины">
+                            <path fill="#fff"
+                              d="M10 .9 9.1 0 5 4.1.9 0 0 .9 4.1 5 0 9.1l.9.9L5 5.9 9.1 10l.9-.9L5.9 5 10 .9Z" />
+                          </svg>
+                        </button>
                       </li>
                       <li class="cart-item">
-                        <a class="popover-link"><img class="small-product" src="/images/product-small-2.jpg" width="39"
-                            height="43" loading="lazy">
-                          <p class="cart-item-title">Профессиональная<br> селфи-палка</p>
+                        <a class="popover-link"><img class="small-product" src="/images/product-small-2.jpg"
+                            alt="профессиональная селфи-палка" width="39" height="43" loading="lazy">
+                          <span class="cart-item-title">Профессиональная<br> селфи-палка</span>
                         </a>
-                        <button class="delete-button" type="button"><span class="visually-hidden">Удалить из
-                            корзины</span></button>
+                        <button class="delete-button" type="button" aria-label="Удалить товар из корзины">
+                          <svg class="delete-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none"
+                            title="Удалить товар из корзины">
+                            <path fill="#fff"
+                              d="M10 .9 9.1 0 5 4.1.9 0 0 .9 4.1 5 0 9.1l.9.9L5 5.9 9.1 10l.9-.9L5.9 5 10 .9Z" />
+                          </svg>
+                        </button>
                       </li>
                     </ul>
                     <div class="payment">
@@ -115,7 +124,7 @@
           <ul class="navigation-catalog-list">
 
             <li class="navigation-catalog-item">
-              <a class="catalog-field" href="#">
+              <button class="catalog-field" href="#">
                 <span class="visually-hidden">Вывод каталога</span>
                 <span class="navigation-menu-link-text">Каталог товаров</span>
                 <span class="badge-wrapper">
@@ -128,30 +137,30 @@
                     <path fill="#000" d="M16 7H0v2h16V7Z" />
                   </svg>
                 </span>
-              </a>
+              </button>
               <ul class="navigation-subcatalog-list">
                 <li class="navigation-subcatalog-item">
                   <a class="subcatalog-link" href="#">
-                    <p class="subcatalog-link-fill">Виртуальная реальность</p>
+                    Виртуальная реальность
                   </a>
                   <a class="subcatalog-link" href="#">
-                    <p class="subcatalog-link-fill">Моноподы для селфи</p>
+                    Моноподы для селфи
                   </a>
                   <a class="subcatalog-link" href="#">
-                    <p class="subcatalog-link-fill">Экшн-камеры</p>
-                  </a>
-                </li>
-                <li class="navigation-subcatalog-item">
-                  <a class="subcatalog-link" href="#">
-                    <p class="subcatalog-link-fill">Фитнес-браслеты</p>
-                  </a>
-                  <a class="subcatalog-link" href="#">
-                    <p class="subcatalog-link-fill">Умные часы</p>
+                    Экшн-камеры
                   </a>
                 </li>
                 <li class="navigation-subcatalog-item">
                   <a class="subcatalog-link" href="#">
-                    <p class="subcatalog-link-fill">Квадрокоптеры</p>
+                    Фитнес-браслеты
+                  </a>
+                  <a class="subcatalog-link" href="#">
+                    Умные часы
+                  </a>
+                </li>
+                <li class="navigation-subcatalog-item">
+                  <a class="subcatalog-link" href="#">
+                    Квадрокоптеры
                   </a>
                 </li>
               </ul>
@@ -426,7 +435,7 @@
               </article>
             </div>
           </li>
-          <li class="services-container services-guarantee-item container visually-hidden">
+          <li class="services-container services-guarantee-item container">
             <ul class="services-list">
               <li class="services-item">
                 <button class="button services-button" type="button">
@@ -453,7 +462,7 @@
               </article>
             </div>
           </li>
-          <li class="services-container services-lawn-item container visually-hidden">
+          <li class="services-container services-lawn-item container">
             <ul class="services-list">
               <li class="services-item">
                 <button class="button services-button" type="button">
@@ -618,7 +627,7 @@
           </ul>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="social-button" href="#">
+              <a class="social-button" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
                 <svg class="social-icon social-icon-telegram" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   width="14" height="12" fill="none">
@@ -631,7 +640,7 @@
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="social-button" href="#">
+              <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Ютуб</span>
                 <svg class="social-icon social-icon-youtube" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   width="16" height="11" fill="none">
@@ -644,7 +653,7 @@
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="social-button" href="#">
+              <a class="social-button" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Твиттер</span>
                 <svg class="social-icon social-icon-twitter" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                   width="16" height="14" fill="none">
@@ -676,25 +685,23 @@
 
     <div class="modal-container modal-container-close">
       <section class="modal-content">
-        <div class="modal-title-wrapper">
-          <h2 class="modal-title">Доставка под заказ</h2>
-          <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
-        </div>
-        <form class="modal-form" action="#" method="post">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+        <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal-row first-row">
             <p class="modal-form-group modal-login">
               <label for="login" class="modal-form-title">Ваше имя:</label>
-              <input class="modal-field" type="text" id="login" placeholder="Введите имя">
+              <input class="modal-field" type="text" name="login" id="login" placeholder="Введите имя">
             </p>
             <p class="modal-form-group modal-mail modal-error">
               <label for="mail" class="modal-form-title">Ваш e-mail:</label>
-              <input class="modal-field" type="email" id="mail" placeholder="Введите e-mail" value="почта">
+              <input class="modal-field" type="email" name="mail" id="mail" placeholder="Введите e-mail" value="почта">
             </p>
           </div>
           <div class="modal-row second-row">
             <p class="modal-form-group modal-free-text">
               <label for="free-text" class="modal-form-title">Что нужно привезти:</label>
-              <input class="modal-field" type="text" id="free-text" placeholder="В свободной форме">
+              <input class="modal-field" type="text" name="output" id="free-text" placeholder="В свободной форме">
             </p>
             <p class="modal-form-group modal-number">
               <span class="modal-form-title label-icon">
@@ -709,11 +716,11 @@
                     к провозу багажа.</span>
                 </span>
               </span>
-              <input class="modal-field" type="number" id="number" value="1">
+              <input class="modal-field" type="number" name="amount" id="number" value="1">
             </p>
           </div>
+          <button type="submit" class="button based-button modal-button">Отправить</button>
         </form>
-        <button type="submit" class="button based-button modal-button">Отправить</button>
       </section>
     </div>
 
