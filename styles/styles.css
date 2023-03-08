@@ -989,6 +989,14 @@ body {
   margin-bottom: 72px;
 }
 
+.services-guarantee-item {
+  display: none;
+}
+
+.services-lawn-item {
+  display: none;
+}
+
 .services-list {
   display: flex;
   flex-direction: column;
