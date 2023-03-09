@@ -42,6 +42,10 @@ body {
   background-color: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .button {
   position: relative;
   display: flex;
@@ -54,6 +58,7 @@ body {
   font-size: 18px;
   line-height: 1.17;
   color: #000000;
+  background-color: transparent;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -249,7 +254,8 @@ body {
 .search-button {
   position: relative;
   border: none;
-  border-radius: 0 50px 50px 0;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
   width: 156px;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
@@ -271,12 +277,13 @@ body {
 }
 
 .search-button::after {
+  content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
+  top: 50%;
+  left: 50%;
   width: 160px;
   height: 40px;
-  content: "";
+  transform: translate(-50%, -50%);
 }
 
 .search-button:focus-visible.search-button::after {
@@ -317,11 +324,8 @@ body {
   line-height: 1.21;
 }
 
-.navigation-card .navigation-icon {
-  overflow: visible;
-  top: 6px;
-  bottom: 10px;
-  left: 15px;
+.navigation-icon-cart {
+  transform: translateY(-2px);
 }
 
 .navigation-menu-list {
@@ -336,6 +340,10 @@ body {
 
 .navigation-menu-item:last-of-type {
   position: relative;
+}
+
+.navigation-exit {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .navigation-menu-link {
@@ -411,7 +419,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .cart-item:not(:first-child) {
@@ -420,7 +428,7 @@ body {
 
 .popover-link {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 23px;
   height: 43px;
 }
@@ -480,7 +488,7 @@ body {
   align-items: center;
   margin: 20px;
   padding: 14.5px 0;
-  height: 21px;
+  height: 50px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -542,8 +550,8 @@ body {
 
 .navigation-subcatalog-list {
   position: absolute;
-  width: 675px;
-  height: 120px;
+  width: 1160px;
+  height: 180px;
   left: -60px;
   top: 31px;
   display: none;
@@ -632,11 +640,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   border: 2px solid #000000;
   opacity: 0.3;
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .catalog-field:hover .badge-wrapper {
@@ -1316,11 +1325,8 @@ body {
 .subscription-text-container {
   display: flex;
   justify-content: space-between;
-  align-items: last baseline;
-  margin: 0 auto;
-  margin-bottom: 144px;
-  padding-left: 13px;
-  padding-top: 61px;
+  align-items: flex-end;
+  margin: 64px 133px 144px 147px;
 }
 
 .subscription-form-container {
@@ -1336,12 +1342,13 @@ body {
 }
 
 .subscription-field {
-  width: 541px;
+  width: 557px;
   padding: 0;
   padding-left: 16px;
   border: none;
   border-bottom: 3px solid #c4c4c4;
   background-color: transparent;
+  box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1383,18 +1390,20 @@ body {
 }
 
 .subscription-text-aside {
-  width: 128px;
+  width: 160px;
   padding-left: 32px;
   background-image: url(../images/green-checkmark.svg);
   background-size: 14px 14px;
   background-repeat: no-repeat;
   background-position: 0 50%;
+  box-sizing: border-box;
 }
 
 .subscription-button {
   padding: 15px 36px;
-  width: auto;
+  width: 253px;
   background-color: #f0f0f0;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -1727,7 +1736,7 @@ body {
 .footer-center {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: 62px;
   margin-top: 137px;
   margin-bottom: 61px;
   min-height: 123px;
@@ -1824,7 +1833,10 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  fill-opacity: 0.6;
+}
+
+.social-icon path {
+  fill: rgba(68, 68, 68, 1);
 }
 
 .social-button:hover {
@@ -1986,6 +1998,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   row-gap: 35px;
+  padding: 0 60px 0 60px;
+  box-sizing: border-box;
 }
 
 .catalog-right-column {
@@ -2003,8 +2017,9 @@ body {
   align-items: center;
   padding: 0 40px;
   width: 100%;
-  max-width: 760px;
+  max-width: 840px;
   min-height: 70px;
+  box-sizing: border-box;
 }
 
 .catalog-products-title.sorting-title {
@@ -2099,9 +2114,31 @@ body {
   width: 30px;
 }
 
+.min-value::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 18px;
+  background-color: #000000s;
+  content: "";
+}
+
 .max-value {
   left: 91px;
   width: 71px;
+}
+
+.max-value::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 71px;
+  height: 18px;
+  background-color: #000000s;
+  content: "";
 }
 
 .price-range-input {
@@ -2122,6 +2159,11 @@ body {
   margin: 0;
 }
 
+.price-range-input:focus-visible.min-value::after {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .catalog-filter-list {
   display: flex;
   flex-direction: column;
@@ -2140,10 +2182,21 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #cccccc;
   border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.control-mark::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  content: "";
 }
 
 .control:hover {
@@ -2158,7 +2211,7 @@ body {
   opacity: 0.1;
 }
 
-.control:focus-visible .control-mark {
+.control:focus-visible .control-mark::after {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -2206,7 +2259,6 @@ body {
 .catalog-products-title {
   margin: 0;
   padding: 25px 0;
-  padding-left: 60px;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -2221,7 +2273,6 @@ body {
   flex-direction: column;
   row-gap: 37px;
   width: 200px;
-  padding: 0 60px 0 60px;
 }
 
 .catalog-filter-title {
@@ -2268,7 +2319,6 @@ body {
   border: none;
   padding-left: 5px;
   padding-right: 5px;
-  margin-left: 60px;
 }
 
 .select {
@@ -2280,7 +2330,6 @@ body {
 
 .select-control {
   display: flex;
-  padding-right: 32px;
   width: 100%;
   border: none;
   background-image: url(../images/catalog-page-images/select-arrow.svg);
@@ -2343,9 +2392,10 @@ body {
   flex-direction: column;
   align-items: center;
   row-gap: 44px;
-  max-width: 760px;
+  max-width: 840px;
   width: 100%;
   padding: 70px 40px 78px;
+  box-sizing: border-box;
   background-color: #ffffff;
 }
 
@@ -2578,8 +2628,9 @@ body {
 }
 
 .catalog-pagination-link {
-  display: inline-block;
-  padding: 10px 16.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   font-family: "Rubik", sans-serif;
   font-style: normal;
