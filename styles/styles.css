@@ -42,10 +42,6 @@ body {
   background-color: #ffffff;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .button {
   position: relative;
   display: flex;
@@ -68,12 +64,12 @@ body {
 
 .based-button {
   align-self: flex-start;
-  width: 220px;
+  min-width: 220px;
   background-color: transparent;
 }
 
 .services-button {
-  width: 160px;
+  min-width: 160px;
   border: none;
   padding: 10px 0;
   cursor: pointer;
@@ -92,7 +88,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  width: 280px;
+  min-width: 280px;
   color: #ffe17f;
   background-color: #000000;
   z-index: 2;
@@ -112,11 +108,11 @@ body {
 }
 
 .about-us-button {
-  width: 270px;
+  min-width: 270px;
 }
 
 .contacts-button {
-  width: 260px;
+  min-width: 260px;
 }
 
 .button:not(.services-button-active):not(.button:active)::after {
@@ -130,6 +126,7 @@ body {
   background-color: #ffe17f;
   content: "";
   z-index: -1;
+  box-sizing: border-box;
 }
 
 .button:not(.product-card-button):hover {
@@ -222,14 +219,14 @@ body {
   border-radius: 50px;
 }
 
-.field[type="search"] {
+.search-field {
   position: relative;
   border: none;
   border-right: 2px solid #000000;
   outline: 2px solid transparent;
   outline-offset: 4px;
   padding-left: 45px;
-  width: 357px;
+  min-width: 357px;
   background: url(../images/search-icon.svg) 4% 50% / 16px 17px no-repeat transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -239,15 +236,15 @@ body {
   color: rgba(0, 0, 0, 1);
 }
 
-.field::placeholder {
+.search-field::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.field[type="search"]:focus-visible {
+.search-field:focus-visible {
   outline-color: #af4fff;
 }
 
-.field[type="search"]:disabled {
+.search-field:disabled {
   opacity: 0.3;
 }
 
@@ -256,7 +253,7 @@ body {
   border: none;
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
-  width: 156px;
+  min-width: 156px;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -281,9 +278,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 160px;
-  height: 40px;
+  min-width: calc(100% + 2px);
+  height: calc(100% + 2px);
   transform: translate(-50%, -50%);
+  box-sizing: border-box;
 }
 
 .search-button:focus-visible.search-button::after {
@@ -403,6 +401,7 @@ body {
   width: 14px;
   height: 6px;
   content: "";
+  box-sizing: border-box;
 }
 
 .popover-content {
@@ -550,11 +549,11 @@ body {
 
 .navigation-subcatalog-list {
   position: absolute;
-  width: 1160px;
-  height: 180px;
   left: -60px;
   top: 31px;
   display: none;
+  min-width: 1160px;
+  height: 180px;
   grid-template-columns: 252px 211px 211px;
   padding: 33px 425px 27px 60px;
   z-index: 0;
@@ -564,6 +563,7 @@ body {
   font-size: 16px;
   line-height: 1.12;
   background-color: #ffe17f;
+  box-sizing: border-box;
 }
 
 .navigation-subcatalog-item:first-of-type {
@@ -581,7 +581,7 @@ body {
   display: flex;
   margin-bottom: 18px;
   max-width: fit-content;
-  height: 15%;
+  width: 100%;
   color: #000000;
   text-decoration: none;
 }
@@ -594,6 +594,7 @@ body {
   height: 1px;
   background-color: #000000;
   content: "";
+  box-sizing: border-box;
 }
 
 .subcatalog-link:hover {
@@ -606,12 +607,12 @@ body {
 
 .subcatalog-link:focus-visible {
   outline: 2px solid #af4fff;
-  outline-offset: 4px;
+  outline-offset: 2px;
 }
 
 .subcatalog-link.active:focus-visible {
   outline: 2px solid #af4fff;
-  outline-offset: 4px;
+  outline-offset: 2px;
 }
 
 .catalog-field {
@@ -621,7 +622,7 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  width: 293px;
+  min-width: 293px;
   z-index: 1;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -700,6 +701,7 @@ body {
   width: 100%;
   height: 2px;
   content: "";
+  box-sizing: border-box;
 }
 
 .active-link.navigation-catalog-link::after {
@@ -793,7 +795,7 @@ body {
   align-items: center;
   justify-content: right;
   margin: 0;
-  width: 250px;
+  min-width: 250px;
   height: 135px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -919,6 +921,7 @@ body {
   width: 12px;
   height: 12px;
   content: "";
+  box-sizing: border-box;
 }
 
 .slider-pagination-button:focus-visible.slider-pagination-button::after {
@@ -982,6 +985,7 @@ body {
   content: "";
   background-color: #f0f0f0;
   z-index: -1;
+  box-sizing: border-box;
 }
 
 .services-list-slider {
@@ -1027,6 +1031,7 @@ body {
   padding: 0;
   background-color: #000000;
   content: "";
+  box-sizing: border-box;
 }
 
 .services-article-container {
@@ -1066,6 +1071,7 @@ body {
   width: 136px;
   height: 164px;
   content: "";
+  box-sizing: border-box;
 }
 
 .services-guarantee-container::after {
@@ -1075,6 +1081,7 @@ body {
   width: 171px;
   height: 195px;
   content: "";
+  box-sizing: border-box;
 }
 
 .services-lawn-container::after {
@@ -1084,6 +1091,7 @@ body {
   width: 156px;
   height: 188px;
   content: "";
+  box-sizing: border-box;
 }
 
 .services-title {
@@ -1196,6 +1204,7 @@ body {
   left: 0;
   background-color: #000000;
   content: "";
+  box-sizing: border-box;
 }
 
 
@@ -1238,6 +1247,7 @@ body {
   background-color: #ffc700;
   border-radius: 50%;
   content: "";
+  box-sizing: border-box;
 }
 
 .contacts {
@@ -1285,6 +1295,7 @@ body {
   left: 0;
   background-color: #000000;
   content: "";
+  box-sizing: border-box;
 }
 
 .contacts-subtitle {
@@ -1342,7 +1353,7 @@ body {
 }
 
 .subscription-field {
-  width: 557px;
+  min-width: 557px;
   padding: 0;
   padding-left: 16px;
   border: none;
@@ -1381,7 +1392,7 @@ body {
 
 .subscription-text {
   margin: 0;
-  width: 560px;
+  min-width: 560px;
   text-align: left;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -1390,7 +1401,7 @@ body {
 }
 
 .subscription-text-aside {
-  width: 160px;
+  min-width: 160px;
   padding-left: 32px;
   background-image: url(../images/green-checkmark.svg);
   background-size: 14px 14px;
@@ -1401,7 +1412,7 @@ body {
 
 .subscription-button {
   padding: 15px 36px;
-  width: 253px;
+  min-width: 253px;
   background-color: #f0f0f0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
@@ -1464,7 +1475,8 @@ body {
   margin: auto;
   padding: 62px 70px;
   max-height: 100vh;
-  width: 920px;
+  max-width: 920px;
+  width: 100%;
   overflow-y: auto;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -1551,6 +1563,7 @@ body {
   font-size: 14.5px;
   line-height: 1.43;
   color: #000000;
+  box-sizing: border-box;
 }
 
 .modal-field {
@@ -1621,7 +1634,7 @@ body {
 
 .modal-button {
   margin-top: -20px;
-  width: 200px;
+  min-width: 200px;
   border: none;
 }
 
@@ -1655,7 +1668,7 @@ body {
   position: absolute;
   top: 36px;
   right: -55px;
-  width: 160px;
+  min-width: 160px;
   padding: 19px 17px 19px 19px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -1678,6 +1691,7 @@ body {
   width: 14px;
   height: 6px;
   content: "";
+  box-sizing: border-box;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1731,6 +1745,7 @@ body {
   height: 7px;
   background-position: 0 100%;
   content: "";
+  box-sizing: border-box;
 }
 
 .footer-center {
@@ -1794,6 +1809,7 @@ body {
   width: 100%;
   height: 2px;
   content: "";
+  box-sizing: border-box;
 }
 
 .footer-link:hover {
@@ -1860,6 +1876,7 @@ body {
   width: 40px;
   height: 40px;
   content: "";
+  box-sizing: border-box;
 }
 
 .social-button:focus-visible {
@@ -2065,6 +2082,7 @@ body {
   width: 18px;
   height: 18px;
   content: "";
+  box-sizing: border-box;
 }
 
 .toggle-min {
@@ -2111,7 +2129,7 @@ body {
 
 .min-value {
   left: -14px;
-  width: 30px;
+  min-width: 30px;
 }
 
 .min-value::after {
@@ -2121,13 +2139,13 @@ body {
   transform: translate(-50%, -50%);
   width: 30px;
   height: 18px;
-  background-color: #000000s;
   content: "";
+  box-sizing: border-box;
 }
 
 .max-value {
   left: 91px;
-  width: 71px;
+  min-width: 71px;
 }
 
 .max-value::after {
@@ -2137,8 +2155,8 @@ body {
   transform: translate(-50%, -50%);
   width: 71px;
   height: 18px;
-  background-color: #000000s;
   content: "";
+  box-sizing: border-box;
 }
 
 .price-range-input {
@@ -2197,6 +2215,7 @@ body {
   width: 20px;
   height: 20px;
   content: "";
+  box-sizing: border-box;
 }
 
 .control:hover {
@@ -2231,6 +2250,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   content: "";
+  box-sizing: border-box;
 }
 
 .radio-list {
@@ -2254,6 +2274,7 @@ body {
   background-color: #000000;
   border-radius: 50%;
   content: "";
+  box-sizing: border-box;
 }
 
 .catalog-products-title {
@@ -2299,6 +2320,7 @@ body {
   width: 100%;
   height: 2px;
   content: "";
+  box-sizing: border-box;
 }
 
 .catalog-filter-group {
@@ -2325,7 +2347,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  width: 141px;
+  min-width: 141px;
 }
 
 .select-control {
@@ -2475,6 +2497,7 @@ body {
 .product-card:active .button.product-card-button::after {
   background-color: #ffc700;
   z-index: -2;
+  box-sizing: border-box;
 }
 
 .product-card-link:focus-visible {
