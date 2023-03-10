@@ -295,6 +295,7 @@ body {
 
 .navigation-login-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 28px;
   margin: 0;
   padding: 0;
@@ -329,6 +330,7 @@ body {
 .navigation-menu-list {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -664,6 +666,7 @@ body {
 
 .navigation-catalog-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 45px;
@@ -2132,31 +2135,9 @@ body {
   min-width: 30px;
 }
 
-.min-value::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 18px;
-  content: "";
-  box-sizing: border-box;
-}
-
 .max-value {
   left: 91px;
   min-width: 71px;
-}
-
-.max-value::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 71px;
-  height: 18px;
-  content: "";
-  box-sizing: border-box;
 }
 
 .price-range-input {
@@ -2178,6 +2159,36 @@ body {
 }
 
 .price-range-input:focus-visible.min-value::after {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.range-value-borders {
+  position: absolute;
+}
+
+.min-value-borders {
+  top: 50%;
+  left: 15%;
+  transform: translate(-30%, -50%);
+  width: 30px;
+  height: 18px;
+  content: "";
+  box-sizing: border-box;
+}
+
+.max-value-borders {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 71px;
+  height: 18px;
+  content: "";
+  box-sizing: border-box;
+}
+
+.price-range-input:focus-visible + .range-value-borders {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -2211,7 +2222,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
   content: "";
@@ -2230,7 +2241,7 @@ body {
   opacity: 0.1;
 }
 
-.control:focus-visible .control-mark::after {
+.control-input:focus-visible + .control-mark::after {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -2400,7 +2411,7 @@ body {
   fill-opacity: 0.5;
 }
 
-.sorting-button:active  .sorting-arrow{
+.sorting-button:active .sorting-arrow {
   fill-opacity: 1;
 }
 
