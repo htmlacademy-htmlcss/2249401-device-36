@@ -1323,6 +1323,10 @@ body {
   margin: 0 auto;
 }
 
+.contacts-text-address-phone:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
 .contacts-schedule {
   margin: 0;
   padding: 0;
@@ -2393,10 +2397,11 @@ body {
   display: inline-block;
   width: 30px;
   height: 30px;
-  padding: 0;
+  padding: 10px 9.5px;
   background-color: inherit;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .sorting-arrow-up {
