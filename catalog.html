@@ -19,6 +19,7 @@
           </a>
           <div class="menu-container">
             <form class="page-search-form" action="https://echo.htmlacademy.ru" method="post">
+              <span class="visually-hidden">поле ввода</span>
               <div class="search-field-label">
                 <input class="search-field" type="search" name="field" placeholder="Поиск по сайту"
                   value="Текст поиска">
@@ -189,8 +190,10 @@
                 <div class="catalog-price-range">
                   <div class="price-range-scale">
                     <div class="price-range-bar">
-                      <button class="price-range-toggle toggle-min" type="button"></button>
-                      <button class="price-range-toggle toggle-max" type="button"></button>
+                      <button class="price-range-toggle toggle-min" type="button"><span class="visually-hidden">левая
+                          кнопка стоимости</span></button>
+                      <button class="price-range-toggle toggle-max" type="button"><span class="visually-hidden">правая
+                          кнопка стоимости</span></button>
                     </div>
                   </div>
 
@@ -269,15 +272,10 @@
                   </li>
                 </ul>
               </fieldset>
-
-
-
+              <button class="button catalog-filter-button" type="submit">
+                Показать
+              </button>
             </form>
-
-            <button class="button catalog-filter-button" type="submit">
-              Показать
-            </button>
-
           </div>
 
           <div class="catalog-right-column">
@@ -498,7 +496,7 @@
       <section class="modal-content">
         <h2 class="modal-title">Доставка под заказ</h2>
         <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
-        <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="modal-form" action="https://htmlacademy.ru/" method="post">
           <div class="modal-row first-row">
             <p class="modal-form-group modal-login">
               <label for="login" class="modal-form-title">Ваше имя:</label>
