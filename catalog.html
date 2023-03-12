@@ -526,7 +526,19 @@
                     к провозу багажа.</span>
                 </span>
               </span>
-              <input class="modal-field" type="number" name="amount" id="number" value="1">
+              <span class="modal-number-wrapper">
+                <button class="modal-toggle-button modal-toggle-minus" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <path fill="#000" d="M16 7H0v2h16V7Z" />
+                  </svg>
+                </button>
+                <input class="modal-field" type="number" name="amount" id="number" value="1">
+                <button class="modal-toggle-button modal-toggle-plus" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <path fill="#000" d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" />
+                  </svg>
+                </button>
+              </span>
             </p>
           </div>
           <button type="submit" class="button based-button modal-button">Отправить</button>

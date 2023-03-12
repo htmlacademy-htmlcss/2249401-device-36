@@ -551,20 +551,22 @@
 
       <section class="subscription">
         <h2 class="visually-hidden">Рассылка</h2>
-        <div class="subscription-text-container container">
-          <p class="subscription-text-title">Подпишитесь<br>
-            на рассылку</p>
-          <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>
-            длительными тест-драйвами, распаковками, а также акции,<br>
-            спецпредложения и вот это вот всё.</p>
-        </div>
-        <div class="subscription-form-container container">
-          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscription-field" type="email" name="subscription-email" id="subscription-field"
-              placeholder="Ваш e-mail">
-            <button class="subscription-button" type="submit">Подписаться</button>
-          </form>
-          <p class="subscription-text subscription-text-aside">Это бесплатно</p>
+        <div class="subscription-inner">
+          <div class="subscription-text-container container">
+            <p class="subscription-text-title">Подпишитесь<br>
+              на рассылку</p>
+            <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>
+              длительными тест-драйвами, распаковками, а также акции,<br>
+              спецпредложения и вот это вот всё.</p>
+          </div>
+          <div class="subscription-form-container container">
+            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+              <input class="subscription-field" type="email" name="subscription-email" id="subscription-field"
+                placeholder="Ваш e-mail">
+              <button class="subscription-button" type="submit">Подписаться</button>
+            </form>
+            <p class="subscription-text subscription-text-aside">Это бесплатно</p>
+          </div>
         </div>
       </section>
 
@@ -684,7 +686,19 @@
                     к провозу багажа.</span>
                 </span>
               </span>
-              <input class="modal-field" type="number" name="amount" id="number" value="1">
+              <span class="modal-number-wrapper">
+                <button class="modal-toggle-button modal-toggle-minus" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <path fill="#000" d="M16 7H0v2h16V7Z" />
+                  </svg>
+                </button>
+                <input class="modal-field" type="number" name="amount" id="number" value="1">
+                <button class="modal-toggle-button modal-toggle-plus" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                    <path fill="#000" d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" />
+                  </svg>
+                </button>
+              </span>
             </p>
           </div>
           <button type="submit" class="button based-button modal-button">Отправить</button>
