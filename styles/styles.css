@@ -22,6 +22,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   min-height: 100%;
@@ -45,6 +51,7 @@ body {
 
 .button {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -59,7 +66,6 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  z-index: 1;
   cursor: pointer;
 }
 
@@ -78,6 +84,7 @@ body {
 
 .services-button-active {
   position: relative;
+  z-index: 2;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 120px;
@@ -92,7 +99,6 @@ body {
   min-width: 280px;
   color: #ffe17f;
   background-color: #000000;
-  z-index: 2;
 }
 
 .services-button-active:hover {
@@ -118,6 +124,7 @@ body {
 
 .button:not(.services-button-active):not(.button:active)::after {
   position: absolute;
+  z-index: -1;
   display: flex;
   top: 40%;
   bottom: 40%;
@@ -126,8 +133,6 @@ body {
   height: 8px;
   background-color: #ffe17f;
   content: "";
-  z-index: -1;
-  box-sizing: border-box;
 }
 
 .button:not(.product-card-button):hover {
@@ -282,7 +287,6 @@ body {
   min-width: calc(100% + 2px);
   height: calc(100% + 2px);
   transform: translate(-50%, -50%);
-  box-sizing: border-box;
 }
 
 .search-button:focus-visible.search-button::after {
@@ -404,7 +408,6 @@ body {
   width: 14px;
   height: 6px;
   content: "";
-  box-sizing: border-box;
 }
 
 .popover-content {
@@ -554,19 +557,18 @@ body {
   position: absolute;
   left: -60px;
   top: 31px;
+  z-index: 0;
   display: none;
   min-width: 1160px;
   height: 180px;
   grid-template-columns: 252px 211px 211px;
   padding: 33px 425px 27px 60px;
-  z-index: 0;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.12;
   background-color: #ffe17f;
-  box-sizing: border-box;
 }
 
 .navigation-subcatalog-item:first-of-type {
@@ -597,7 +599,6 @@ body {
   height: 1px;
   background-color: #000000;
   content: "";
-  box-sizing: border-box;
 }
 
 .subcatalog-link:hover {
@@ -620,13 +621,13 @@ body {
 
 .catalog-field {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
   margin: 0;
   min-width: 293px;
-  z-index: 1;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -634,10 +635,10 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
+  text-decoration: none;
   background-color: #ffe17f;
   border: none;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .badge-wrapper {
@@ -649,7 +650,6 @@ body {
   border: 2px solid #000000;
   opacity: 0.3;
   border-radius: 50%;
-  box-sizing: border-box;
 }
 
 .catalog-field:hover .badge-wrapper {
@@ -666,12 +666,12 @@ body {
 }
 
 .navigation-catalog-list {
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 45px;
-  z-index: 1;
 }
 
 .navigation-catalog-link {
@@ -705,7 +705,6 @@ body {
   width: 100%;
   height: 2px;
   content: "";
-  box-sizing: border-box;
 }
 
 .active-link.navigation-catalog-link::after {
@@ -759,13 +758,13 @@ body {
 }
 
 .slider-button {
+  z-index: 1;
   display: block;
   margin: 0;
   padding: 0;
   border: none;
   height: 60px;
   background-color: inherit;
-  z-index: 1;
   cursor: pointer;
 }
 
@@ -925,7 +924,6 @@ body {
   width: 12px;
   height: 12px;
   content: "";
-  box-sizing: border-box;
 }
 
 .slider-pagination-button:focus-visible.slider-pagination-button::after {
@@ -984,12 +982,11 @@ body {
 .services::after {
   position: absolute;
   top: 102px;
+  z-index: -1;
   min-height: 289px;
   width: 100%;
   content: "";
   background-color: #f0f0f0;
-  z-index: -1;
-  box-sizing: border-box;
 }
 
 .services-list-slider {
@@ -1035,7 +1032,6 @@ body {
   padding: 0;
   background-color: #000000;
   content: "";
-  box-sizing: border-box;
 }
 
 .services-article-container {
@@ -1069,33 +1065,30 @@ body {
 }
 
 .services-delivery-container::after {
+  width: 136px;
+  height: 164px;
   background-image: url(../images/delivery-image.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 136px;
-  height: 164px;
   content: "";
-  box-sizing: border-box;
 }
 
 .services-guarantee-container::after {
+  width: 171px;
+  height: 195px;
   background-image: url(../images/guarantee-image.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 171px;
-  height: 195px;
   content: "";
-  box-sizing: border-box;
 }
 
 .services-lawn-container::after {
+  width: 156px;
+  height: 188px;
   background-image: url(../images/lawn-image.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 156px;
-  height: 188px;
   content: "";
-  box-sizing: border-box;
 }
 
 .services-title {
@@ -1208,7 +1201,6 @@ body {
   left: 0;
   background-color: #000000;
   content: "";
-  box-sizing: border-box;
 }
 
 
@@ -1251,7 +1243,6 @@ body {
   background-color: #ffc700;
   border-radius: 50%;
   content: "";
-  box-sizing: border-box;
 }
 
 .contacts {
@@ -1299,7 +1290,6 @@ body {
   left: 0;
   background-color: #000000;
   content: "";
-  box-sizing: border-box;
 }
 
 .contacts-subtitle {
@@ -1370,7 +1360,6 @@ body {
   border: none;
   border-bottom: 3px solid #c4c4c4;
   background-color: transparent;
-  box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1418,24 +1407,22 @@ body {
   background-size: 14px 14px;
   background-repeat: no-repeat;
   background-position: 0 50%;
-  box-sizing: border-box;
 }
 
 .subscription-button {
+  display: flex;
+  align-items: center;
   padding: 15px 36px;
   min-width: 253px;
-  background-color: #f0f0f0;
-  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background-color: #f0f0f0;
   border: 3px solid #c4c4c4;
 }
 
@@ -1466,12 +1453,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
   display: flex;
   margin: auto;
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
-  z-index: 3;
 }
 
 .modal-container-close {
@@ -1490,7 +1477,6 @@ body {
   width: 100%;
   overflow-y: auto;
   background-color: #ffffff;
-  box-sizing: border-box;
   border: 10px solid #000000;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
@@ -1575,7 +1561,6 @@ body {
   font-size: 14.5px;
   line-height: 1.43;
   color: #000000;
-  box-sizing: border-box;
 }
 
 .modal-field {
@@ -1589,7 +1574,6 @@ body {
   line-height: 1.25;
   color: rgba(0, 0, 0, 1);
   background-color: #f0f0f0;
-  box-sizing: border-box;
 }
 
 .modal-field::placeholder {
@@ -1673,13 +1657,13 @@ body {
 }
 
 .modal-toggle-button:focus-visible {
-  outline: 2px solid #af4fff;
   z-index: 1;
+  outline: 2px solid #af4fff;
 }
 
 .modal-number-wrapper .modal-field:focus-visible {
-  outline-offset: 0;
   z-index: 1;
+  outline-offset: 0;
 }
 
 .modal-button {
@@ -1741,7 +1725,6 @@ body {
   width: 14px;
   height: 6px;
   content: "";
-  box-sizing: border-box;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1795,7 +1778,6 @@ body {
   height: 7px;
   background-position: 0 100%;
   content: "";
-  box-sizing: border-box;
 }
 
 .footer-center {
@@ -1859,7 +1841,6 @@ body {
   width: 100%;
   height: 2px;
   content: "";
-  box-sizing: border-box;
 }
 
 .footer-link:hover {
@@ -1926,7 +1907,6 @@ body {
   width: 40px;
   height: 40px;
   content: "";
-  box-sizing: border-box;
 }
 
 .social-button:focus-visible {
@@ -2066,7 +2046,6 @@ body {
   align-items: flex-start;
   row-gap: 35px;
   padding: 0 60px 0 60px;
-  box-sizing: border-box;
 }
 
 .catalog-right-column {
@@ -2086,7 +2065,6 @@ body {
   width: 100%;
   max-width: 840px;
   min-height: 70px;
-  box-sizing: border-box;
 }
 
 .catalog-products-title.sorting-title {
@@ -2120,7 +2098,6 @@ body {
   background-color: #ebebeb;
   border: 2px solid #000000;
   border-radius: 50%;
-  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -2132,7 +2109,6 @@ body {
   width: 18px;
   height: 18px;
   content: "";
-  box-sizing: border-box;
 }
 
 .toggle-min {
@@ -2221,7 +2197,6 @@ body {
   width: 30px;
   height: 18px;
   content: "";
-  box-sizing: border-box;
 }
 
 .max-value-borders {
@@ -2232,7 +2207,6 @@ body {
   width: 71px;
   height: 18px;
   content: "";
-  box-sizing: border-box;
 }
 
 .price-range-input:focus-visible + .range-value-borders {
@@ -2262,7 +2236,6 @@ body {
   height: 20px;
   border: 2px solid #cccccc;
   border-radius: 3px;
-  box-sizing: border-box;
 }
 
 .control-mark::after {
@@ -2273,7 +2246,6 @@ body {
   width: 20px;
   height: 20px;
   content: "";
-  box-sizing: border-box;
 }
 
 .control:hover {
@@ -2308,7 +2280,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   content: "";
-  box-sizing: border-box;
 }
 
 .radio-list {
@@ -2332,7 +2303,6 @@ body {
   background-color: #000000;
   border-radius: 50%;
   content: "";
-  box-sizing: border-box;
 }
 
 .catalog-products-title {
@@ -2378,7 +2348,6 @@ body {
   width: 100%;
   height: 2px;
   content: "";
-  box-sizing: border-box;
 }
 
 .catalog-filter-group {
@@ -2461,7 +2430,6 @@ body {
   background-color: inherit;
   border: none;
   cursor: pointer;
-  box-sizing: border-box;
 }
 
 .sorting-arrow-up {
@@ -2493,7 +2461,6 @@ body {
   max-width: 840px;
   width: 100%;
   padding: 70px 40px 78px;
-  box-sizing: border-box;
   background-color: #ffffff;
 }
 
@@ -2524,14 +2491,9 @@ body {
   right: 27px;
   width: 60px;
   height: 60px;
-  content: "NEW";
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  background-color: transparent;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -2539,15 +2501,19 @@ body {
   line-height: 16px;
   letter-spacing: 0.2em;
   color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  content: "NEW";
 }
 
 .product-card-button-wrapper {
   position: absolute;
+  z-index: -1;
   top: 170px;
   left: 70px;
   right: 70px;
   margin: 0;
-  z-index: -1;
 }
 
 .product-card:hover .product-card-image {
@@ -2571,9 +2537,8 @@ body {
 }
 
 .product-card:active .button.product-card-button::after {
-  background-color: #ffc700;
   z-index: -2;
-  box-sizing: border-box;
+  background-color: #ffc700;
 }
 
 .product-card-link:focus-visible {
@@ -2624,7 +2589,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  box-sizing: border-box;
   background-color: #ffffff;
 }
 
@@ -2644,7 +2608,6 @@ body {
   background-color: inherit;
   color: #000000;
   text-transform: uppercase;
-  box-sizing: border-box;
   border: 3px solid #e5e5e5;
 }
 
