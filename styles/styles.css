@@ -872,6 +872,8 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main-page {
@@ -2394,6 +2396,10 @@ img {
 }
 
 .catalog-inner-header {
+  margin: 35px auto;
+}
+
+.inner-header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2404,8 +2410,7 @@ img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 35px auto;
-  margin-left: 200px;
+  margin: 0 21px 0 60px;
   padding: 0;
   gap: 16px;
   width: 100%;
