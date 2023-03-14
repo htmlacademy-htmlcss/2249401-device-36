@@ -135,6 +135,7 @@ img {
 }
 
 .services-button-active:focus-visible {
+  padding-left: 35px;
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -194,8 +195,9 @@ img {
 }
 
 .header-container {
+  position: relative;
   margin-top: 40px;
-  padding: 0;
+  padding: 0 60px;
   background-color: #ffe17f;
 }
 
@@ -260,12 +262,11 @@ img {
   margin: 0;
 }
 
-.search-field-label {
+.search-field-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid #000000;
-  border-radius: 50px;
 }
 
 .search-field {
@@ -279,10 +280,29 @@ img {
   line-height: 1.25;
   color: rgba(0, 0, 0, 1);
   background: url("../images/search-icon.svg") 4% 50% / 16px 17px no-repeat transparent;
-  border: none;
-  border-right: 2px solid #000000;
-  outline: 2px solid transparent;
-  outline-offset: 4px;
+  border: 2px solid #000000;
+  border-right: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  outline: none;
+}
+
+.search-field::-webkit-search-decoration,
+.search-field::-webkit-search-cancel-button,
+.search-field::-webkit-search-results-button,
+.search-field::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.search-field-label {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  min-width: 70%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .search-field::-webkit-input-placeholder {
@@ -305,8 +325,9 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-field:focus-visible {
-  outline-color: #af4fff;
+.search-field:focus-visible + .search-field-label {
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
 }
 
 .search-field:disabled {
@@ -315,16 +336,16 @@ img {
 
 .search-button {
   position: relative;
-  min-width: 156px;
+  min-width: 160px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   background-color: transparent;
-  border: none;
-  border-top-right-radius: inherit;
-  border-bottom-right-radius: inherit;
+  border: 2px solid #000000;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   outline: none;
   cursor: pointer;
 }
@@ -687,20 +708,34 @@ img {
 .navigation-subcatalog-list {
   position: absolute;
   left: -60px;
-  top: 31px;
+  top: 100%;
   z-index: 0;
   display: none;
   -ms-grid-columns: 252px 211px 211px;
   grid-template-columns: 252px 211px 211px;
   max-width: 1160px;
   min-height: 180px;
-  padding: 33px 425px 27px 60px;
+  padding: 14px 60px 39px 60px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.12;
+}
+
+.navigation-subcatalog-list::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  min-width: 1160px;
+  min-height: 180px;
+  height: 100%;
   background-color: #ffe17f;
+  content: "";
 }
 
 .navigation-subcatalog-item:first-of-type {
@@ -830,6 +865,7 @@ img {
   gap: 44px;
   padding: 0;
   margin: 0;
+  background-color: #ffe17f;
 }
 
 .navigation-catalog-link {
@@ -2086,6 +2122,7 @@ img {
 
 .tooltip {
   position: absolute;
+  z-index: 2;
   margin-top: -3px;
   margin-left: 8px;
 }
@@ -2109,7 +2146,7 @@ img {
   position: absolute;
   top: 36px;
   right: -55px;
-  min-width: 160px;
+  min-width: 200px;
   padding: 19px 17px 19px 19px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -2126,7 +2163,7 @@ img {
 .tooltip-text::before {
   position: absolute;
   top: -6px;
-  left: 128px;
+  left: 132px;
   width: 14px;
   height: 6px;
   background-image: url("../images/popover-triangle.svg");
