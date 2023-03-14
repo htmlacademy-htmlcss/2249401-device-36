@@ -657,7 +657,6 @@ img {
 }
 
 .navigation-catalog-item:first-of-type {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,7 +692,7 @@ img {
   display: none;
   -ms-grid-columns: 252px 211px 211px;
   grid-template-columns: 252px 211px 211px;
-  min-width: 1160px;
+  max-width: 1160px;
   min-height: 180px;
   padding: 33px 425px 27px 60px;
   font-family: "Rubik", sans-serif;
@@ -821,6 +820,7 @@ img {
 }
 
 .navigation-catalog-list {
+  position: relative;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1379,6 +1379,7 @@ img {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
+  color: #000000;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -1422,6 +1423,11 @@ img {
 
 .delivery-link:active {
   opacity: 0.3;
+}
+
+.delivery-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .about-contacts-container {
@@ -2031,6 +2037,7 @@ img {
   padding: 20px 24.5px;
   width: 60px;
   height: 60px;
+  appearance: textfield;
 }
 
 .modal-field::-webkit-outer-spin-button,
