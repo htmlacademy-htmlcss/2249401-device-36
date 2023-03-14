@@ -325,7 +325,7 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-field:focus-visible + .search-field-label {
+.search-field:focus-visible + .search-field-label{
   outline: 2px solid #af4fff;
   outline-offset: 4px;
 }
@@ -2989,7 +2989,7 @@ img {
 }
 
 .sorting-button {
-  display: inline-block;
+  display: flex;
   width: 30px;
   height: 30px;
   padding: 10px 9.5px;
@@ -3100,6 +3100,7 @@ img {
   top: 170px;
   left: 70px;
   right: 70px;
+  display: none;
   margin: 0;
 }
 
@@ -3117,13 +3118,14 @@ img {
 
 .product-card:hover .product-card-button-wrapper {
   z-index: 1;
+  display: block;
 }
 
 .product-card:active .product-card-description {
   opacity: 0.3;
 }
 
-.product-card:active .button.product-card-button::after {
+.product-card:active .product-card-button::after {
   z-index: -2;
   background-color: #ffc700;
 }
