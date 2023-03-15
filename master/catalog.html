@@ -22,9 +22,10 @@
             <form class="page-search-form" action="https://echo.htmlacademy.ru" method="post">
               <span class="visually-hidden">поле ввода</span>
               <div class="search-field-label">
+                <label class="visually-hidden" for="field">Поиск по сайту</label>
                 <input class="search-field" type="search" name="field" placeholder="Поиск по сайту"
                   value="Текст поиска">
-                <button type="submit" class="search-button">Найти</button>
+                <button class="search-button" type="submit">Найти</button>
               </div>
             </form>
             <ul class="navigation-login-list">
@@ -499,17 +500,17 @@
         <form class="modal-form" action="https://htmlacademy.ru/" method="post">
           <div class="modal-row first-row">
             <p class="modal-form-group modal-login">
-              <label for="login" class="modal-form-title">Ваше имя:</label>
+              <label class="modal-form-title" for="login">Ваше имя:</label>
               <input class="modal-field" type="text" name="login" id="login" placeholder="Введите имя">
             </p>
             <p class="modal-form-group modal-mail modal-error">
-              <label for="mail" class="modal-form-title">Ваш e-mail:</label>
+              <label class="modal-form-title" for="mail">Ваш e-mail:</label>
               <input class="modal-field" type="email" name="mail" id="mail" placeholder="Введите e-mail" value="почта">
             </p>
           </div>
           <div class="modal-row second-row">
             <p class="modal-form-group modal-free-text">
-              <label for="free-text" class="modal-form-title">Что нужно привезти:</label>
+              <label class="modal-form-title" for="free-text">Что нужно привезти:</label>
               <input class="modal-field" type="text" name="output" id="free-text" placeholder="В свободной форме">
             </p>
             <p class="modal-form-group modal-number">
