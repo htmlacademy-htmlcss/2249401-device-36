@@ -6,6 +6,7 @@
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <base href="https://htmlacademy-htmlcss.github.io/2249401-device-36/master/">
 </head>
 
@@ -21,10 +22,10 @@
           <div class="menu-container">
             <form class="page-search-form" action="https://echo.htmlacademy.ru" method="post">
               <span class="visually-hidden">поле ввода</span>
-              <div class="search-field-label">
-                <label class="visually-hidden" for="field">Поиск по сайту</label>
-                <input class="search-field" type="search" name="field" placeholder="Поиск по сайту"
-                  value="Текст поиска">
+              <div class="search-field-wrapper">
+                <input class="search-field" type="search" name="field" id="search-field" placeholder="Поиск по сайту">
+                <label class="search-field-label" for="search-field"><span class="visually-hidden">Поиск по
+                    сайту</span></label>
                 <button class="search-button" type="submit">Найти</button>
               </div>
             </form>
@@ -82,7 +83,7 @@
                     <h2 class="visually-hidden">Корзина</h2>
                     <ul class="cart-items-list">
                       <li class="cart-item">
-                        <a class="popover-link"><img class="small-product" src="/images/product-small-1.jpg"
+                        <a class="popover-link"><img class="small-product" src="images/product-small-1.jpg"
                             alt="любительская селфи-палка" width="39" height="43" loading="lazy">
                           <span class="cart-item-title">Любительская<br> селфи-палка</span>
                         </a>
@@ -95,7 +96,7 @@
                         </button>
                       </li>
                       <li class="cart-item">
-                        <a class="popover-link"><img class="small-product" src="/images/product-small-2.jpg"
+                        <a class="popover-link"><img class="small-product" src="images/product-small-2.jpg"
                             alt="профессиональная селфи-палка" width="39" height="43" loading="lazy">
                           <span class="cart-item-title">Профессиональная<br> селфи-палка</span>
                         </a>
@@ -286,17 +287,14 @@
             <div class="sorting-container">
               <p class="catalog-products-title sorting-title">Сортировка:</p>
               <span class="visually-hidden">выбор параметра сортировки</span>
-              <div class="select sorting-type">
-                <select class="select-control" id="select-control" name="select-control">
-                  <option value="popular">Популярные</option>
-                  <option value="cheap">Дешевые</option>
-                  <option value="expensive">Дорогие</option>
-                </select>
-              </div>
+              <select class="select-control" id="select-control" name="select-control">
+                <option value="popular">Популярные</option>
+                <option value="cheap">Дешевые</option>
+                <option value="expensive">Дорогие</option>
+              </select>
 
               <div class="sorting-buttons">
-                <button class="sorting-button sorting-button-up" type="button">
-                  <span class="visually-hidden">Сортировка по возрастанию</span>
+                <a class="sorting-button sorting-button-up" href="#" aria-label="Сортировка по возрастанию">
                   <svg class="sorting-arrow sorting-arrow-up" xmlns="http://www.w3.org/2000/svg" width="11" height="10"
                     fill="none">
                     <g clip-path="url(#a)">
@@ -306,9 +304,8 @@
                       <path fill="#fff" d="M0 0h11v10H0z" />
                     </defs>
                   </svg>
-                </button>
-                <button class="sorting-button sorting-button-down" type="button">
-                  <span class="visually-hidden">Сортировка по убыванию</span>
+                </a>
+                <a class="sorting-button sorting-button-down" href="#" aria-label="Сортировка по убыванию">
                   <svg class="sorting-arrow sorting-arrow-down" xmlns="http://www.w3.org/2000/svg" width="11"
                     height="10" fill="none">
                     <g clip-path="url(#a)">
@@ -318,7 +315,7 @@
                       <path fill="#fff" d="M0 0h11v10H0z" />
                     </defs>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -326,7 +323,7 @@
               <ul class="product-list">
                 <li class="product-card">
                   <div class="product-card-button-wrapper">
-                    <span class="button based-button product-card-button">Подробнее</span>
+                    <a class="button based-button product-card-button" href="#">Подробнее</a>
                   </div>
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog-page-images/catalog-card-1.jpg"
@@ -339,7 +336,7 @@
                 </li>
                 <li class="product-card">
                   <div class="product-card-button-wrapper">
-                    <span class="button based-button product-card-button">Подробнее</span>
+                    <a class="button based-button product-card-button" href="#">Подробнее</a>
                   </div>
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog-page-images/catalog-card-2.jpg"
@@ -352,7 +349,7 @@
                 </li>
                 <li class="product-card">
                   <div class="product-card-button-wrapper">
-                    <span class="button based-button product-card-button">Подробнее</span>
+                    <a class="button based-button product-card-button" href="#">Подробнее</a>
                   </div>
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog-page-images/catalog-card-3.jpg"
@@ -365,7 +362,7 @@
                 </li>
                 <li class="product-card">
                   <div class="product-card-button-wrapper">
-                    <span class="button based-button product-card-button">Подробнее</span>
+                    <a class="button based-button product-card-button" href="#">Подробнее</a>
                   </div>
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog-page-images/catalog-card-4.jpg"
@@ -378,9 +375,7 @@
                 </li>
               </ul>
 
-              <div class="catalog-pagination-button-wrapper">
-                <button class="catalog-pagination-show-more" type="button">Загрузить ещё</button>
-              </div>
+              <button class="catalog-pagination-show-more" type="button">Загрузить ещё</button>
 
               <nav class="catalog-pagination">
                 <a class="pagination-button pagination-prev pagination-disabled" href="#">
