@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico"> <!-- 32x32 -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -202,6 +203,7 @@
         </div>
         <ul class="slider-pagination-articles">
           <li class="slider-article-wrapper">
+            <span class="visually-hidden">Первый товар - квадрокоптер</span>
             <img class="slider-image" src="images/slider-1.png" alt="Квадрокоптер" width="560" height="560"
               loading="lazy">
 
@@ -233,6 +235,7 @@
             </article>
           </li>
           <li class="slider-article-wrapper item-unchosen">
+            <span class="visually-hidden">Второй товар - Фитнес-браслет</span>
             <img class="slider-image" src="images/slider-2.png" alt="Фитнес-браслет" width="560" height="560"
               loading="lazy">
 
@@ -258,6 +261,7 @@
             </article>
           </li>
           <li class="slider-article-wrapper item-unchosen">
+            <span class="visually-hidden">Третий товар - Селфи-палка</span>
             <img class="slider-image" src="images/slider-3.png" alt="Селфи-палки" width="560" height="560"
               loading="lazy">
 
@@ -293,179 +297,6 @@
             </article>
           </li>
         </ul>
-        <!--
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item item-chosen">
-            <span class="visually-hidden">Первый товар - квадрокоптер</span>
-            <p class="slider-counter">01</p>
-
-            <ul class="slider-button-list">
-              <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
-                  </svg>
-                </button></li>
-              <li class="slider-button-list-item">
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-
-            <img class="slider-image" src="images/slider-1.png" alt="Квадрокоптер" width="560" height="560"
-              loading="lazy">
-
-
-            <article class="slider-article copter">
-              <h3 class="visually-hidden">Преимущества квадрокоптера</h3>
-
-              <div class="article-text-container">
-                <p class="article-text-big"><b>Порхает как бабочка,<br>
-                    жалит как пчела!</b></p>
-                <p class="article-text-small">Этот обычный, на первый взгляд, квадрокоптер оснащен
-                  мощным лазером, замаскированным под стандартную камеру.</p>
-              </div>
-
-              <a class="button based-button" href="#">Подробнее</a>
-
-              <ul class="slider-info">
-                <li class="slider-feature">
-                  <p class="slider-info-term">800 м</p>
-                  <p class="slider-info-description">Дальность полета</p>
-                </li>
-                <li class="slider-feature">
-                  <p class="slider-info-term">50 м
-                  </p>
-                  <p class="slider-info-description">Радиус поражения</p>
-                </li>
-              </ul>
-            </article>
-            <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
-                  class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-            </ul>
-          </li>
-          <li class="slider-pagination-item item-unchosen">
-            <span class="visually-hidden">Второй товар - Фитнес-браслет</span>
-            <p class="slider-counter">02</p>
-
-            <ul class="slider-button-list">
-              <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
-                  </svg>
-                </button></li>
-              <li class="slider-button-list-item">
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-
-            <img class="slider-image" src="images/slider-2.png" alt="Фитнес-браслет" width="560" height="560"
-              loading="lazy">
-
-            <article class="slider-article fitness-watch">
-              <h3 class="visually-hidden">Преимущества фитнес-браслета</h3>
-
-              <div class="article-text-container">
-                <p class="article-text-big"><b>Худеем<br> правильно!</b></p>
-                <p class="article-text-small">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
-                  занятия и соблюдать диету.</p>
-              </div>
-
-              <a class="button based-button" href="#">Подробнее</a>
-
-              <ul class="slider-info">
-                <li class="slider-feature">
-                  <p class="slider-info-term">48 часов</p>
-                  <p class="slider-info-description">Без подзарядки</p>
-                </li>
-              </ul>
-            </article>
-            <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
-                  class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-            </ul>
-          </li>
-          <li class="slider-pagination-item item-unchosen">
-            <span class="visually-hidden">Третий товар - Селфи-палка</span>
-            <p class="slider-counter">03</p>
-
-            <ul class="slider-button-list">
-              <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
-                  </svg>
-                </button></li>
-              <li class="slider-button-list-item">
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-
-            <img class="slider-image" src="images/slider-3.png" alt="Селфи-палки" width="560" height="560"
-              loading="lazy">
-
-            <article class="slider-article selfie-stick">
-              <h3 class="visually-hidden">Преимущества селфи-палки</h3>
-
-              <div class="article-text-container">
-                <p class="article-text-big"><b>Делай селфи,<br>
-                    как Бен Стиллер!</b></p>
-                <p class="article-text-small">Самая длинная палка для селфи доступна в нашем магазине. Восемь
-                  (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-              </div>
-
-              <a class="button based-button" href="#">Подробнее</a>
-
-              <ul class="slider-info">
-                <li class="slider-feature">
-                  <p class="slider-info-term">8,5 м</p>
-                  <p class="slider-info-description">Длина палки</p>
-                </li>
-                <li class="slider-feature">
-                  <p class="slider-info-term">5 кг
-                  </p>
-                  <p class="slider-info-description">Вес палки</p>
-                </li>
-                <li class="slider-feature">
-                  <p class="slider-info-term">Карбон</p>
-                  <p class="slider-info-description">Материал</p>
-                </li>
-              </ul>
-            </article>
-            <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
-                  class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-            </ul>
-          </li>
-        </ol> -->
       </section>
 
       <section class="mini-catalog container">
