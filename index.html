@@ -6,6 +6,7 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -20,9 +21,10 @@
           <div class="menu-container">
             <form class="page-search-form" action="https://echo.htmlacademy.ru" method="post">
               <span class="visually-hidden">поле ввода</span>
-              <div class="search-field-label">
-                <label class="visually-hidden" for="field">Поиск по сайту</label>
-                <input class="search-field" type="search" id="field" name="field" placeholder="Поиск по сайту">
+              <div class="search-field-wrapper">
+                <input class="search-field" type="search" id="search-field" name="field" placeholder="Поиск по сайту">
+                <label class="search-field-label" for="search-field"><span class="visually-hidden">Поиск по
+                    сайту</span></label>
                 <button class="search-button" type="submit">Найти</button>
               </div>
             </form>
@@ -87,7 +89,7 @@
                     <h2 class="visually-hidden">Корзина</h2>
                     <ul class="cart-items-list">
                       <li class="cart-item">
-                        <a class="popover-link"><img class="small-product" src="/images/product-small-1.jpg"
+                        <a class="popover-link"><img class="small-product" src="images/product-small-1.jpg"
                             alt="любительская селфи-палка" width="39" height="43" loading="lazy">
                           <span class="cart-item-title">Любительская<br> селфи-палка</span>
                         </a>
@@ -100,7 +102,7 @@
                         </button>
                       </li>
                       <li class="cart-item">
-                        <a class="popover-link"><img class="small-product" src="/images/product-small-2.jpg"
+                        <a class="popover-link"><img class="small-product" src="images/product-small-2.jpg"
                             alt="профессиональная селфи-палка" width="39" height="43" loading="lazy">
                           <span class="cart-item-title">Профессиональная<br> селфи-палка</span>
                         </a>
@@ -173,38 +175,46 @@
     <main class="main-inner main-page">
       <section class="slider container">
         <h2 class="visually-hidden">Примеры товаров</h2>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item item-chosen">
+        <div class="slider-elements">
+          <ul class="slider-button-list">
+            <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
+                  <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
+                </svg>
+              </button></li>
+            <li class="slider-button-list-item">
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
+                  <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <ul class="slider-indicator-list">
+            <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
+                class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
+            <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
+                class="slider-pagination-button" type="button"></button></li>
+            <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
+                class="slider-pagination-button" type="button"></button></li>
+          </ul>
+        </div>
+        <ul class="slider-pagination-articles">
+          <li class="slider-article-wrapper">
             <span class="visually-hidden">Первый товар - квадрокоптер</span>
-            <p class="slider-counter">01</p>
-
-            <ul class="slider-button-list">
-              <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
-                  </svg>
-                </button></li>
-              <li class="slider-button-list-item">
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-
             <img class="slider-image" src="images/slider-1.png" alt="Квадрокоптер" width="560" height="560"
               loading="lazy">
 
+            <p class="slider-counter">01</p>
 
-            <article class="slider-article copter">
+            <article class="slider-article">
               <h3 class="visually-hidden">Преимущества квадрокоптера</h3>
 
               <div class="article-text-container">
-                <p class="article-text-big"><b>Порхает как бабочка,<br>
-                    жалит как пчела!</b></p>
+                <p class="article-text-big">Порхает как бабочка,<br>
+                    жалит как пчела!</p>
                 <p class="article-text-small">Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным лазером, замаскированным под стандартную камеру.</p>
               </div>
@@ -223,44 +233,19 @@
                 </li>
               </ul>
             </article>
-            <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
-                  class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-            </ul>
           </li>
-          <li class="slider-pagination-item item-unchosen">
+          <li class="slider-article-wrapper item-unchosen">
             <span class="visually-hidden">Второй товар - Фитнес-браслет</span>
-            <p class="slider-counter">02</p>
-
-            <ul class="slider-button-list">
-              <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
-                  </svg>
-                </button></li>
-              <li class="slider-button-list-item">
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-
             <img class="slider-image" src="images/slider-2.png" alt="Фитнес-браслет" width="560" height="560"
               loading="lazy">
 
-            <article class="slider-article fitness-watch">
+            <p class="slider-counter">02</p>
+
+            <article class="slider-article">
               <h3 class="visually-hidden">Преимущества фитнес-браслета</h3>
 
               <div class="article-text-container">
-                <p class="article-text-big"><b>Худеем<br> правильно!</b></p>
+                <p class="article-text-big">Худеем<br> правильно!</p>
                 <p class="article-text-small">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
                   занятия и соблюдать диету.</p>
               </div>
@@ -274,45 +259,20 @@
                 </li>
               </ul>
             </article>
-            <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
-                  class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-            </ul>
           </li>
-          <li class="slider-pagination-item item-unchosen">
+          <li class="slider-article-wrapper item-unchosen">
             <span class="visually-hidden">Третий товар - Селфи-палка</span>
-            <p class="slider-counter">03</p>
-
-            <ul class="slider-button-list">
-              <li class="slider-button-list-item"><button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" />
-                  </svg>
-                </button></li>
-              <li class="slider-button-list-item">
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="60" fill="none">
-                    <path fill="#000" d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-
             <img class="slider-image" src="images/slider-3.png" alt="Селфи-палки" width="560" height="560"
               loading="lazy">
 
-            <article class="slider-article selfie-stick">
+            <p class="slider-counter">03</p>
+
+            <article class="slider-article">
               <h3 class="visually-hidden">Преимущества селфи-палки</h3>
 
               <div class="article-text-container">
-                <p class="article-text-big"><b>Делай селфи,<br>
-                    как Бен Стиллер!</b></p>
+                <p class="article-text-big">Делай селфи,<br>
+                    как Бен Стиллер!</p>
                 <p class="article-text-small">Самая длинная палка для селфи доступна в нашем магазине. Восемь
                   (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
               </div>
@@ -335,16 +295,8 @@
                 </li>
               </ul>
             </article>
-            <ul class="slider-indicator-list">
-              <li class="slider-indicator-item"><span class="visually-hidden">1 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">2 фото</span><button
-                  class="slider-pagination-button" type="button"></button></li>
-              <li class="slider-indicator-item"><span class="visually-hidden">3 фото</span><button
-                  class="slider-pagination-button slider-pagination-button-current" type="button"></button></li>
-            </ul>
           </li>
-        </ol>
+        </ul>
       </section>
 
       <section class="mini-catalog container">
@@ -396,94 +348,56 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Наши услуги</h2>
-        <ul class="services-list-slider">
-          <li class="services-container services-delivery-item container">
-            <ul class="services-list">
-              <li class="services-item">
-                <button class="services-button services-button-active" type="button">
-                  Доставка
-                </button>
-              </li>
-              <li class="services-item">
-                <button class="button services-button" type="button">
-                  Гарантия
-                </button>
-              </li>
-              <li class="services-item">
-                <button class="button services-button" type="button">
-                  Кредит
-                </button>
-              </li>
-            </ul>
-            <div class="services-article-container services-delivery-container">
+        <div class="services-container container">
+          <ul class="services-list">
+            <li class="services-item">
+              <button class="services-button services-button-active" type="button">
+                Доставка
+              </button>
+            </li>
+            <li class="services-item">
+              <button class="button services-button" type="button">
+                Гарантия
+              </button>
+            </li>
+            <li class="services-item">
+              <button class="button services-button" type="button">
+                Кредит
+              </button>
+            </li>
+          </ul>
+          <ul class="services-list-slider">
+            <li class="services-article-container services-delivery-container">
               <article class="services-article">
                 <h2 class="services-title">Доставка</h2>
                 <p class="services-description">Мы с удовольствием доставим ваш товар прямо<br>
                   к вашему подъезду совершенно бесплатно! Ведь<br>
                   мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </article>
-            </div>
-          </li>
-          <li class="services-container services-guarantee-item container">
-            <ul class="services-list">
-              <li class="services-item">
-                <button class="button services-button" type="button">
-                  Доставка
-                </button>
-              </li>
-              <li class="services-item">
-                <button class="services-button services-button-active" type="button">
-                  Гарантия
-                </button>
-              </li>
-              <li class="services-item">
-                <button class="button services-button" type="button">
-                  Кредит
-                </button>
-              </li>
-            </ul>
-            <div class="services-article-container services-guarantee-container">
+            </li>
+            <li class="services-article-container services-guarantee-container">
               <article class="services-article">
                 <h2 class="services-title">Гарантия</h2>
                 <p class="services-description">Если из-за возгорания купленного у нас товара у вас<br>
                   сгорит дом — не переживайте, мы выдадим вам новый.<br>
                   Товар, не дом, конечно же.</p>
               </article>
-            </div>
-          </li>
-          <li class="services-container services-lawn-item container">
-            <ul class="services-list">
-              <li class="services-item">
-                <button class="button services-button" type="button">
-                  Доставка
-                </button>
-              </li>
-              <li class="services-item">
-                <button class="button services-button" type="button">
-                  Гарантия
-                </button>
-              </li>
-              <li class="services-item">
-                <button class="services-button services-button-active" type="button">
-                  Кредит
-                </button>
-              </li>
-            </ul>
-            <div class="services-article-container services-lawn-container">
+            </li>
+            <li class="services-article-container services-lawn-container">
               <article class="services-article">
                 <h2 class="services-title">Кредит</h2>
                 <p class="services-description">Залезть в долговую яму стало проще! Кредитные<br>
                   консультанты подберут для вас наиболее выгодные<br>
                   условия кредита. Выгодные для банка, разумеется.</p>
               </article>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="delivery container">
         <h2 class="visually-hidden">Условия доставки</h2>
-        <a class="delivery-link">
+        <a class="delivery-link" href="#">
           <div class="delivery-icon-wrapper delivery-icon-square">
             <svg class="delivery-icon-car" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="47" height="31"
               fill="none">
@@ -556,10 +470,10 @@
         <h2 class="visually-hidden">Рассылка</h2>
         <div class="subscription-inner">
           <div class="subscription-text-container container">
-            <p class="subscription-text-title">Подпишитесь<br>
+            <p class="subscription-text-title">Подпишитесь
               на рассылку</p>
-            <p class="subscription-text">Еженедельный дайджест с обзорами новинок,<br>
-              длительными тест-драйвами, распаковками, а также акции,<br>
+            <p class="subscription-text">Еженедельный дайджест с обзорами новинок,
+              длительными тест-драйвами, распаковками, а также акции,
               спецпредложения и вот это вот всё.</p>
           </div>
           <div class="subscription-form-container container">
