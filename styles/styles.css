@@ -1681,8 +1681,6 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  min-height: 421px;
-  height: 100%;
   background-color: #f0f0f0;
 }
 
@@ -1697,7 +1695,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 56px;
+  min-height: 421px;
 }
 
 .subscription-text-container {
@@ -1724,6 +1722,7 @@ img {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding: 0;
+  margin-bottom: 56px;
 }
 
 .subscription-form {
